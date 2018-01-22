@@ -1,71 +1,60 @@
-2018-01-22 08:57:38.8850 DESKTOP-2Q89F24 5  ::1 GET http://localhost:49338/ 
+2018-01-22 09:18:48.7746 DESKTOP-2Q89F24 5  ::1 GET http://localhost:49338/ 
 
-2018-01-22 08:57:53.5383 DESKTOP-2Q89F24 9  ::1 POST http://localhost:49338/Login/Login 
+2018-01-22 09:19:03.5662 DESKTOP-2Q89F24 7  ::1 POST http://localhost:49338/Login/Login 
 ViewMode=Init
 ReturnUrl=
 UserId=SRS1
 Password=SRS1
 
-2018-01-22 08:57:53.6413 DESKTOP-2Q89F24 9 SRS1 ::1 GET http://localhost:49338/Menu 
+2018-01-22 09:19:03.7892 DESKTOP-2Q89F24 15 SRS1 ::1 GET http://localhost:49338/Menu 
 
-2018-01-22 08:58:00.9099 DESKTOP-2Q89F24 16 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+2018-01-22 09:19:14.1794 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
 
-2018-01-22 08:58:09.9596 DESKTOP-2Q89F24 6 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+2018-01-22 09:19:21.8661 DESKTOP-2Q89F24 16 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
 ViewMode=Init
 EstimateNoCondition=
 
-2018-01-22 08:58:10.1046 DESKTOP-2Q89F24 9 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+2018-01-22 09:19:22.0741 DESKTOP-2Q89F24 16 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
 menuId=ZZ1031
 group=ZZ
 
-2018-01-22 08:58:28.3270 DESKTOP-2Q89F24 17 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail/Confirm 
-ViewMode=Detail
-EstimateNo=10000
-Item=99001
-FinalDestination=99001
-ReferenceRnm=
-ListSet=1
-UnitCost=100
-EstimateNumber=900
-Price=90000
-ListFactory=
-DeliveryTime=1202
-Remark=‚ ‚ ‚ ‚ 
-SearchEstimateNo=
-RowId=6
-Revision=86
+2018-01-22 09:20:57.0476 DESKTOP-2Q89F24 5  ::1 GET http://localhost:49338/ 
 
-2018-01-22 08:58:43.6251 DESKTOP-2Q89F24 10 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail/Calculation 
-ViewMode=UpdateConfirmed
-EstimateNo=10000
-Item=99001
-FinalDestination=99001
-ReferenceRnm=
-ListSet=1
-UnitCost=100
-EstimateNumber=900
-Price=90000
-ListFactory=
-DeliveryTime=1202
-Remark=‚ ‚ ‚ ‚ 
-SearchEstimateNo=
-RowId=6
-Revision=86
+2018-01-22 09:21:09.0911 DESKTOP-2Q89F24 13  ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
 
-2018-01-22 08:58:58.9294 DESKTOP-2Q89F24 16 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail/Calculation 
-ViewMode=UpdateConfirmed
-EstimateNo=10000
-Item=99001
-FinalDestination=99001
-ReferenceRnm=
-ListSet=1
-UnitCost=100
-EstimateNumber=800
-Price=90000
-ListFactory=
-DeliveryTime=1202
-Remark=‚ ‚ ‚ ‚ 
-SearchEstimateNo=
-RowId=6
-Revision=86
+2018-01-22 09:21:09.2291 DESKTOP-2Q89F24 13 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-22 09:21:22.2450 DESKTOP-2Q89F24 12 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-22 09:21:31.5178 DESKTOP-2Q89F24 9 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-22 09:21:32.0398 DESKTOP-2Q89F24 10 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-22 09:24:35.2585 DESKTOP-2Q89F24 5  ::1 GET http://localhost:49338/ 
+
+2018-01-22 09:24:51.7239 DESKTOP-2Q89F24 11  ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-22 09:24:51.8989 DESKTOP-2Q89F24 11 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-22 09:25:02.0208 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-22 09:25:12.7274 DESKTOP-2Q89F24 6 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-22 09:25:12.9324 DESKTOP-2Q89F24 13 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
 
