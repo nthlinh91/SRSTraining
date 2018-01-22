@@ -205,6 +205,7 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\WebApiConfig.vb" />
+    <Compile Include="Controllers\EC\EC1040\EC1040ListController.vb" />
     <Compile Include="Controllers\LoginController.vb" />
     <Compile Include="Controllers\MenuController.vb" />
     <Compile Include="Controllers\WaitController.vb" />
@@ -258,6 +259,7 @@
     <Content Include="Config\NLog.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Content\EC\EC1040\EC1040.css" />
     <Content Include="Content\login_en-US.txt" />
     <Content Include="Content\login_ja-JP.txt" />
     <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
@@ -295,6 +297,8 @@
     <Content Include="Data\Common\Menu\MenuData.xlsx" />
     <Content Include="Data\ZZ\ZZ1031\ZZ1031Data.xlsx" />
     <Content Include="Data\ZZ\ZZ1031\ListSetData.xlsx" />
+    <Content Include="Data\EC\EC1040\EC1040ConditionData.xlsx" />
+    <Content Include="Data\EC\EC1040\EC1040Data.xlsx" />
     <None Include="Data\ZZ\ZZ1031\ListFactoryData.xlsx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -316,6 +320,7 @@
     <Content Include="Scripts\common_search.js" />
     <Content Include="Scripts\cookies.js" />
     <Content Include="Scripts\dropdownchecklist.js" />
+    <Content Include="Scripts\EC\EC1040\EC1040.js" />
     <Content Include="Scripts\enter.js" />
     <Content Include="Scripts\fixedcolumnstable.js" />
     <Content Include="Scripts\function.js" />
@@ -351,6 +356,8 @@
     </None>
     <Content Include="Views\ZZ\ZZ1031\ZZ1031Detail.vbhtml" />
     <Content Include="Views\ZZ\ZZ1031\ZZ1031Search.vbhtml" />
+    <Content Include="Views\EC\EC1040\EC1040List.vbhtml" />
+    <Content Include="Views\EC\EC1040\EC1040ListBody.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -374,6 +381,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EC\EC1040.vbproj">
+      <Project>{369ab2d2-23b8-4f75-bd7c-be67bc7598da}</Project>
+      <Name>EC1040</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -401,7 +414,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties SRSCreateDate="2018-01-11" SRSAuthorName="SRSTaro" RootNamespace="SRSSystem" SRSSystemID="SRSSystem" SRSSystemName="トレーニング" SRSUserName="SRS" SafeProjectName="SRSSystem" />
+      <UserProperties SafeProjectName="SRSSystem" SRSUserName="SRS" SRSSystemName="トレーニング" SRSSystemID="SRSSystem" RootNamespace="SRSSystem" SRSAuthorName="SRSTaro" SRSCreateDate="2018-01-11" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

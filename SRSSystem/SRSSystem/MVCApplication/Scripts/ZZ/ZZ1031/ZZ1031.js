@@ -35,4 +35,12 @@ $(document).ready(function () {
         $("#Update").attr("disabled", "disabled");
     });
 
+    //**************************************************
+    //機能概要 : 参照ボタン押下時処理を行なう
+    //**************************************************
+    $("input.shimukesakicd-btn").on("click", function () {
+        openSaishuShimukechiSelectWindow();
+        return false;
+    });
+
 });

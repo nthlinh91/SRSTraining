@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ZZ", "ZZ", "{7775A6C2-DCFA-
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ZZ1031", "SRSSystem\ZZ\ZZ1031\ZZ1031.vbproj", "{BFC1100F-B6B2-4EC2-B5C8-B0C9B0C5C747}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EC", "EC", "{FD0FE314-9B82-4DCB-9D78-D64A9F55649C}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EC1040", "SRSSystem\EC\EC1040.vbproj", "{369AB2D2-23B8-4F75-BD7C-BE67BC7598DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +33,16 @@ Global
 		{BFC1100F-B6B2-4EC2-B5C8-B0C9B0C5C747}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFC1100F-B6B2-4EC2-B5C8-B0C9B0C5C747}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFC1100F-B6B2-4EC2-B5C8-B0C9B0C5C747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{369AB2D2-23B8-4F75-BD7C-BE67BC7598DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{369AB2D2-23B8-4F75-BD7C-BE67BC7598DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{369AB2D2-23B8-4F75-BD7C-BE67BC7598DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{369AB2D2-23B8-4F75-BD7C-BE67BC7598DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BFC1100F-B6B2-4EC2-B5C8-B0C9B0C5C747} = {7775A6C2-DCFA-46DF-B403-E832F95D3ED7}
+		{369AB2D2-23B8-4F75-BD7C-BE67BC7598DA} = {FD0FE314-9B82-4DCB-9D78-D64A9F55649C}
 	EndGlobalSection
 EndGlobal

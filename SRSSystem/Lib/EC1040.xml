@@ -1,0 +1,329 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EC1040
+</name>
+</assembly>
+<members>
+<member name="T:JUST.EC.EC1040.My.Resources.Resources">
+<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member>
+<member name="P:JUST.EC.EC1040.My.Resources.Resources.ResourceManager">
+<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member>
+<member name="P:JUST.EC.EC1040.My.Resources.Resources.Culture">
+<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member>
+<member name="T:JUST.EC.EC1040.Business.EC1040ListFacade">
+ <userName>住友ゴム工業株式会社</userName>
+ <sysName>タイヤ海外業務基幹システム（JUST）</sysName>
+ <subSysName>共通</subSysName>
+ <summary>
+ 最終仕向地検索 一覧画面 Facadeクラス
+ </summary>
+ <author>sfunaoka/SDS</author>
+ <Version>
+ 001, 2015-09-15, 新規作成
+ </Version>
+</member>
+<member name="M:JUST.EC.EC1040.Business.EC1040ListFacade.Index">
+ <summary>
+ 一覧画面 初期化処理
+ </summary>
+ <returns>一覧画面モデル</returns>
+</member>
+<member name="M:JUST.EC.EC1040.Business.EC1040ListFacade.Search(JUST.EC.EC1040.Model.EC1040ListModel,System.Boolean)">
+ <summary>
+ 一覧画面 検索処理
+ </summary>
+ <param name="listModel">一覧画面モデル</param>
+ <param name="resetCache">検索キャッシュをリセットする場合 <c>True</c> 。</param>
+ <returns>一覧画面モデル</returns>
+</member>
+<member name="T:JUST.EC.EC1040.Business.EC1040ListRule">
+ <userName>住友ゴム工業株式会社</userName>
+ <sysName>タイヤ海外業務基幹システム（JUST）</sysName>
+ <subSysName>共通</subSysName>
+ <summary>
+ 最終仕向地検索 一覧画面 Ruleクラス
+ </summary>
+ <author>sfunaoka/SDS</author>
+ <Version>
+ 001, 2015-09-15, 新規作成
+ </Version>
+</member>
+<member name="M:JUST.EC.EC1040.Business.EC1040ListRule.GetCommonData(JUST.EC.EC1040.Model.EC1040ListModel)">
+ <summary>
+ 表示情報取得
+ </summary>
+ <param name="listModel">一覧画面モデル</param>
+ <returns>一覧画面モデル</returns>
+</member>
+<member name="M:JUST.EC.EC1040.Business.EC1040ListRule.CheckCondition(JUST.EC.EC1040.Model.EC1040ListModel)">
+ <summary>
+ 一覧画面 入力値チェック処理
+ </summary>
+ <param name="listModel">一覧画面モデル</param>
+ <returns>一覧画面モデル</returns>
+</member>
+<member name="M:JUST.EC.EC1040.Business.EC1040ListRule.SearchListKey(JUST.EC.EC1040.Model.EC1040ListModel)">
+ <summary>
+ 一覧画面 検索処理 (キー取得)
+ </summary>
+ <param name="listModel">一覧画面モデル</param>
+ <returns>一覧画面モデル</returns>
+</member>
+<member name="M:JUST.EC.EC1040.Business.EC1040ListRule.SearchList(JUST.EC.EC1040.Model.EC1040ListModel)">
+ <summary>
+ 一覧画面 検索処理 (明細取得)
+ </summary>
+ <param name="listModel">一覧画面モデル</param>
+ <returns>一覧画面モデル</returns>
+</member>
+<member name="M:JUST.EC.EC1040.Business.EC1040ListRule.GetParameterData(JUST.EC.EC1040.Model.EC1040ListModel)">
+ <summary>
+ 画面パラメータ情報取得
+ </summary>
+ <param name="listModel">一覧画面モデル</param>
+ <returns>一覧画面モデル</returns>
+</member>
+<member name="M:JUST.EC.EC1040.Business.EC1040ListRule.SaveConditions(JUST.EC.EC1040.Model.EC1040ListModel)">
+ <summary>
+ 検索条件を保持領域にコピーする
+ </summary>
+ <param name="listModel">一覧画面モデル</param>
+ <returns>一覧画面モデル</returns>
+</member>
+<member name="M:JUST.EC.EC1040.Business.EC1040ListRule.LoadConditions(JUST.EC.EC1040.Model.EC1040ListModel)">
+ <summary>
+ 保持領域から検索条件を復帰する
+ </summary>
+ <param name="listModel">一覧画面モデル</param>
+ <returns>一覧画面モデル</returns>
+</member>
+<member name="T:JUST.EC.EC1040.Constant.EC1040Constant">
+ <userName>住友ゴム工業株式会社</userName>
+ <sysName>タイヤ海外業務基幹システム（JUST）</sysName>
+ <subSysName>共通</subSysName>
+ <summary>
+ 最終仕向地検索 定数クラス
+ </summary>
+ <author>sfunaoka/SDS</author>
+ <Version>
+ 001, 2015-09-15, 新規作成
+ </Version>
+</member>
+<member name="F:JUST.EC.EC1040.Constant.EC1040Constant.GymSeigyoKbnTkaiHan">
+ <summary>
+ 業務制御区分（T海販）
+ </summary>
+</member>
+<member name="F:JUST.EC.EC1040.Constant.EC1040Constant.GymSeigyoKbnTkaiGyo">
+ <summary>
+ 業務制御区分（T海業）
+ </summary>
+</member>
+<member name="F:JUST.EC.EC1040.Constant.EC1040Constant.GymSeigyoKbnOEBusho">
+ <summary>
+ 業務制御区分（OE部署）
+ </summary>
+</member>
+<member name="F:JUST.EC.EC1040.Constant.EC1040Constant.GymSeigyoKbnHansha">
+ <summary>
+ 業務制御区分（統括販社）
+ </summary>
+</member>
+<member name="F:JUST.EC.EC1040.Constant.EC1040Constant.GymSeigyoKbnSonota">
+ <summary>
+ 業務制御区分（その他）
+ </summary>
+</member>
+<member name="F:JUST.EC.EC1040.Constant.EC1040Constant.GymSeigyoKbnDairiten">
+ <summary>
+ 業務制御区分（代理店区分）
+ </summary>
+</member>
+<member name="F:JUST.EC.EC1040.Constant.EC1040Constant.GymSeigyoCdTkaiHan">
+ <summary>
+ 業務制御コード（T海販）
+ </summary>
+</member>
+<member name="F:JUST.EC.EC1040.Constant.EC1040Constant.GymSeigyoCdTkaiGyo">
+ <summary>
+ 業務制御コード（T海業）
+ </summary>
+</member>
+<member name="F:JUST.EC.EC1040.Constant.EC1040Constant.GymSeigyoCdOEBusho">
+ <summary>
+ 業務制御コード（OE部署）
+ </summary>
+</member>
+<member name="F:JUST.EC.EC1040.Constant.EC1040Constant.GymSeigyoCdHansha">
+ <summary>
+ 業務制御コード（統括販社）
+ </summary>
+</member>
+<member name="T:JUST.EC.EC1040.DataAccess.EC1040DataAccess">
+ <userName>住友ゴム工業株式会社</userName>
+ <sysName>タイヤ海外業務基幹システム（JUST）</sysName>
+ <subSysName>共通</subSysName>
+ <summary>
+ 最終仕向地検索 データアクセスクラス
+ </summary>
+ <author>sfunaoka/SDS</author>
+ <Version>
+ 001, 2015-09-15, 新規作成
+ </Version>
+</member>
+<member name="M:JUST.EC.EC1040.DataAccess.EC1040DataAccess.SearchListKey(JUST.EC.EC1040.Model.EC1040ListModel)">
+ <summary>
+ 一覧画面 キー検索
+ </summary>
+ <param name="listModel">一覧画面モデル</param>
+ <returns>詳細項目リスト</returns>
+</member>
+<member name="M:JUST.EC.EC1040.DataAccess.EC1040DataAccess.SearchList(JUST.EC.EC1040.Model.EC1040ListModel)">
+ <summary>
+ 一覧画面 検索
+ </summary>
+ <param name="listModel">一覧画面モデル</param>
+ <returns>詳細項目リスト</returns>
+</member>
+<member name="T:JUST.EC.EC1040.Model.EC1040ListElementModel">
+ <userName>住友ゴム工業株式会社</userName>
+ <sysName>タイヤ海外業務基幹システム（JUST）</sysName>
+ <subSysName>共通</subSysName>
+ <summary>
+ 最終仕向地検索 一覧画面 明細データモデル
+ </summary>
+ <author>sfunaoka/SDS</author>
+ <Version>
+ 001, 2015-09-15, 新規作成
+ </Version>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListElementModel.SHIMUKECHI">
+ <summary>
+ 仕向地
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListElementModel.SAISHUSHIMUKECHI">
+ <summary>
+ 最終仕向地
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListElementModel.SHIMUKECHICD">
+ <summary>
+ 仕向地コード
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListElementModel.SHIMUKECHINM">
+ <summary>
+ 仕向地名
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListElementModel.SAISHUSHIMUKECHICD">
+ <summary>
+ 最終仕向地コード
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListElementModel.SAISHUSHIMUKECHINM">
+ <summary>
+ 最終仕向地名
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListElementModel.SAISHUSHIMUKECHIRNM">
+ <summary>
+ 最終仕向地名略称
+ </summary>
+</member>
+<member name="T:JUST.EC.EC1040.Model.EC1040ListModel">
+ <userName>住友ゴム工業株式会社</userName>
+ <sysName>タイヤ海外業務基幹システム（JUST）</sysName>
+ <subSysName>共通</subSysName>
+ <summary>
+ 最終仕向地検索 一覧画面 メインモデル
+ </summary>
+ <author>sfunaoka/SDS</author>
+ <Version>
+ 001, 2015-09-15, 新規作成
+ </Version>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.FuncName">
+ <summary>
+ 画面タイトル
+ </summary>
+ <remarks>固定文言を設定</remarks>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.WindowTitle">
+ <summary>
+ Windowタイトル
+ </summary>
+ <remarks>固定文言を設定</remarks>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.RowCount">
+ <summary>
+ １ページあたりの行数
+ </summary>
+ <remarks>固定行数を返す</remarks>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.ShimukechiCdCondition">
+ <summary>
+ 仕向地コード(検索条件)
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.SaichushimukechiNmCondition">
+ <summary>
+ 最終仕向地名(検索条件)
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.ShimukechiCdConditionHidden">
+ <summary>
+ 仕向地コード(引数)
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.SaichushimukechiNmConditionHidden">
+ <summary>
+ 最終仕向地名(引数)
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.ShimukechiCdConditionSaved">
+ <summary>
+ 仕向地コード(検索条件保持用)
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.SaichushimukechiNmConditionSaved">
+ <summary>
+ 最終仕向地名(検索条件保持用)
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.ListData">
+ <summary>
+ 一覧データ
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.SelectedIndex">
+ <summary>
+ [選択]
+ </summary>
+ <remarks>選択された行番号が入る(0スタート)</remarks>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.GymSeigyoKbn">
+ <summary>
+ 業務制御区分
+ </summary>
+</member>
+<member name="P:JUST.EC.EC1040.Model.EC1040ListModel.LoginDaiKbn">
+ <summary>
+ ログイン代理店区分
+ </summary>
+</member>
+</members>
+</doc>

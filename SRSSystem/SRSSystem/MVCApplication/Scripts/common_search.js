@@ -228,3 +228,24 @@ function setValuesToDropDownCheckBox(id, values) {
         nodes.filter("[value=" + values[i] + "]").prop("checked", true);
     }
 }
+
+//**************************************************
+//機能概要 : 最終仕向地検索選択子画面を開く
+//**************************************************
+function openSaishuShimukechiSelectWindow() {
+
+    //検索子画面表示
+    // urlは相対パスになるため、同じ機能ID内であればコントローラ名を指定するだけでOKです。
+    // 他の機能IDを呼び出したい場合は、階層を遡るか、絶対パス指定をする必要があります。
+    var url = "/EC/EC1040/EC1040List";
+
+    var menutitle = "";
+    var params = null;
+    var width = "750px";
+    var height = "650px";
+    var result = commonModalDialog(url, menutitle, params, width, height, function () { });
+    if (isNullValue(result)) {
+        return;
+    }
+
+}

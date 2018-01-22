@@ -93,11 +93,13 @@ End Section
         </tr>
 
           <tr>
-              <td class="table-item-title table-item-require">@Html.SRSLabelFor(Function(m) m.FinalDestination)</td>
-              <td>@Html.SRSTextBoxFor(Function(m) m.FinalDestination, cssClass:="item-numeric")</td>
+              <td class="table-item-title table-item-require">
+                  @Html.SRSLabelFor(Function(m) m.FinalDestination)
+              </td>
               <td>
-                  @Html.SRSButton("ReferenceCd-refer-btn", "lbl_CMN_REFERRING", disabled:=_disabledOther, cssClass:="btn btn-smallreferencecd-btn")
-                  @Html.SRSTextBoxFor(Function(m) m.ReferenceRnm, disabled:=_disabledOther, cssClass:="item-numeric ReferenceRnm")
+                  @Html.SRSTextBoxFor(Function(m) m.FinalDestination, disabled:=_disabledInsUpd, cssClass:="item-numeric")
+                  @Html.SRSButton("ShimukeSakiCd-refer-btn", "lbl_CMN_REFERRING", cssClass:="btn btn-small shimukesakicd-btn")
+                  @Html.SRSTextBoxFor(Function(m) m.ReferenceRnm, disabled:=_disabledInsUpd, cssClass:="item-numeric")
               </td>
           </tr>
 
