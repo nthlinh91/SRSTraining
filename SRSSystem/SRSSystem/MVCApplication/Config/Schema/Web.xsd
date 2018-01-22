@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SRS.Standards.MvcFramework">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ExceptionMessageConfiguration">
+          <xs:complexType>
+            <xs:attribute name="configSource" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MvcFrameworkConfiguration">
+          <xs:complexType>
+            <xs:attribute name="configSource" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataSelectConfiguration">
+          <xs:complexType>
+            <xs:attribute name="configSource" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UserConfiguration">
+          <xs:complexType>
+            <xs:attribute name="configSource" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TimeoutConfiguration">
+          <xs:complexType>
+            <xs:attribute name="configSource" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nlog">
+    <xs:complexType>
+      <xs:attribute name="configSource" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="glimpse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tabs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ignoredTypes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="add">
+                      <xs:complexType>
+                        <xs:attribute name="type" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inspectors">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ignoredTypes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="add">
+                      <xs:complexType>
+                        <xs:attribute name="type" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="defaultRuntimePolicy" type="xs:string" use="required" />
+      <xs:attribute name="endpointBaseUri" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

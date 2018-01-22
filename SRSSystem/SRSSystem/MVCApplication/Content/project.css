@@ -1,0 +1,139 @@
+﻿@charset "UTF-8";
+/* プロジェクト特有スタイルを指定します */
+
+/***********************************************************/
+/***** プロジェクト個別の色設定 ****************************/
+/***********************************************************/
+
+/*エラーメッセージのデフォルトスタイル*/
+.message-error {
+    color: #ff0000;
+}
+
+/* ヘッダ領域 */
+.page-header .page-header-content,
+.menu-content > .content-header {
+    /*グラデーションキャンセル*/
+    filter: none;
+    -ms-filter: "";
+    background: none;
+    /*背景色を改めて指定*/
+    background-color: #FFCCFF;
+}
+.page-header .page-header-title,
+.page-header .page-header-detail-info {
+    /* ヘッダ文字色 */
+    color: #000060;
+}
+
+/* フッタ領域 */
+.page-footer {
+    background-color: #FFCCFF;
+}
+
+
+/*** 単票モジュール ***/
+/* 単票項目ヘッダ */
+.table-items .table-item-title {
+    background-color: #CCFFCC;
+    color: #000060;
+    font-weight: bold;
+}
+/* 単票項目ヘッダ(必須) */
+.table-items .table-item-title.table-item-require {
+    background-color: #FFE6CD;
+}
+
+
+/*** 一覧モジュール ***/
+/* 一覧ヘッダ */
+.table-list-header th, .table-list-header td {
+    background-color: #CCFFCC;
+    color: #000060;
+    font-weight: bold;
+}
+/* 一覧ヘッダ(必須列) */
+.table-list-header th.table-item-require,
+.table-list-header td.table-item-require {
+    background-color: #FFE6CD;
+    color: #000060;
+}
+/* 一覧偶数行 */
+.table-list-body .table-list-row.table-record2 {
+    background-color: #F0F8FF;
+}
+/*一覧内のエラーメッセージ*/
+.table-list-body .table-record-error{
+    background-color: #ffcdcd;
+}
+.table-list-body .table-record-error .message-error{
+    color: #ff0000;
+}
+
+/*選択可能テーブル*/
+.table-list.selectable .table-list-body .table-list-row{
+    cursor: pointer;
+}
+
+.table-list.selectable .table-list-body .table-list-row.row-selected{
+    background-color: #ffffcc;
+}
+
+.table-list.selectable .table-list-body .table-list-row:hover,
+.table-list.selectable .table-list-body .table-list-row.row-selected:hover,
+.table-list.selectable .table-list-body .table-list-row.table-row-hover {
+    background-color: #ffff9d;
+}
+
+/*複数行選択可能テーブル (グループ毎にtbodyで区切る)*/
+.table-list.selectable.multiline .table-list-body tbody:hover,
+.table-list.selectable.multiline .table-list-body tbody:hover .table-list-row,
+.table-list.selectable.multiline .table-list-body tbody.table-group-hover .table-list-row{
+    background-color: #ffff9d;
+}
+
+
+/* ポップアップ画面メッセージ領域 */
+.fill-contents {
+    color: #000060;
+    background-color: #FFCCFF;
+}
+
+
+/*** メニューモジュール ***/
+/* メニューコンテナ背景色 */
+.menu-container {
+    background-color: #CCFFCC;
+}
+/* メニュー背景色 */
+.menu-content-list {
+    background-color: white;
+}
+/* メニューリンク文字 */
+.menu-link-text {
+    color: #2B2380;
+}
+.menu-link-text:hover {
+    color: #ff9900;
+}
+
+
+/***********************************************************/
+/***** プロジェクト個別のサイズ設定 ************************/
+/***********************************************************/
+
+/* 一覧表示テーブルの高さ */
+.table-list-body-container {
+    height: 500px;
+}
+
+/* 列固定テーブルの、固定列全体の幅 */
+.grid-table .grid-flow-tables 
+{
+    width: auto;
+}
+/* 列固定テーブルの、固定でない列全体の幅 */
+.grid-table .grid-flow-tables 
+{
+    width: 800px;
+}

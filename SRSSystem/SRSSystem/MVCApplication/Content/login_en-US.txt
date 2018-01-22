@@ -1,0 +1,4 @@
+﻿<ul>
+  <li>SRS1/SRS1</li>
+  <li>This message written in /Content/login_en-US.txt.</li>
+</ul>

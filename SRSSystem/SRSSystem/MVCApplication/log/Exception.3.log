@@ -1,0 +1,52 @@
+2018-01-11 17:43:44.9044 DESKTOP-2Q89F24 9 SRS1 ::1 System.Data.SqlClient.SqlException ユーザー 'SRS' はログインできませんでした。
+
+Server stack trace: 
+   場所 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   場所 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   場所 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   場所 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   場所 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   場所 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   場所 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   場所 System.Data.SqlClient.SqlConnection.Open()
+   場所 Glimpse.Ado.AlternateType.GlimpseDbConnection.Open()
+   場所 Dapper.SqlMapper.<QueryImpl>d__11`1.MoveNext()
+   場所 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   場所 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   場所 Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   場所 SRS.Standards.MvcFramework.Core.DataAccess.DataAccessBase.ExecuteQuery[T](String commandText, Object paramModel) 場所 C:\svn\!!標準テンプレート\ASP.NET標準テンプレート\trunk\SRS\Standards\MVCFramework\Core\DataAccess\DataAccessBase.vb:行 75
+   場所 SRS.Standards.MvcFramework.Core.DataAccess.DataAccessBase.GetDataSelectListItem(String selectName, Object model) 場所 C:\svn\!!標準テンプレート\ASP.NET標準テンプレート\trunk\SRS\Standards\MVCFramework\Core\DataAccess\DataAccessBase.vb:行 1554
+   場所 SRS.Standards.MvcFramework.Core.DataAccess.DataAccessBase.GetDataSelectListItem(String selectName) 場所 C:\svn\!!標準テンプレート\ASP.NET標準テンプレート\trunk\SRS\Standards\MVCFramework\Core\DataAccess\DataAccessBase.vb:行 1517
+   場所 SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailRule.GetCommonData(ZZ1031DetailModel detailModel) 場所 C:\SRSTraining\SRSSystem\SRSSystem\ZZ\ZZ1031\Business\ZZ1031DetailRule.vb:行 102
+   場所 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   場所 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   場所 SRS.Standards.MvcFramework.Core.Facade.FacadeBase.ProcessMessage(IMethodCallMessage callMessage) 場所 C:\svn\!!標準テンプレート\ASP.NET標準テンプレート\trunk\SRS\Standards\MVCFramework\Core\Facade\FacadeBase.vb:行 120
+
+2018-01-11 17:44:12.0490 DESKTOP-2Q89F24 10 SRS1 ::1 System.Data.SqlClient.SqlException ユーザー 'SRS' はログインできませんでした。
+
+Server stack trace: 
+   場所 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   場所 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   場所 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   場所 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   場所 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   場所 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   場所 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   場所 System.Data.SqlClient.SqlConnection.Open()
+   場所 Glimpse.Ado.AlternateType.GlimpseDbConnection.Open()
+   場所 Dapper.SqlMapper.<QueryImpl>d__11`1.MoveNext()
+   場所 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   場所 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   場所 Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   場所 SRS.Standards.MvcFramework.Core.DataAccess.DataAccessBase.ExecuteQuery[T](String commandText, Object paramModel) 場所 C:\svn\!!標準テンプレート\ASP.NET標準テンプレート\trunk\SRS\Standards\MVCFramework\Core\DataAccess\DataAccessBase.vb:行 75
+   場所 SRS.Standards.MvcFramework.Core.DataAccess.DataAccessBase.GetDataSelectListItem(String selectName, Object model) 場所 C:\svn\!!標準テンプレート\ASP.NET標準テンプレート\trunk\SRS\Standards\MVCFramework\Core\DataAccess\DataAccessBase.vb:行 1554
+   場所 SRS.Standards.MvcFramework.Core.DataAccess.DataAccessBase.GetDataSelectListItem(String selectName) 場所 C:\svn\!!標準テンプレート\ASP.NET標準テンプレート\trunk\SRS\Standards\MVCFramework\Core\DataAccess\DataAccessBase.vb:行 1517
+   場所 SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailRule.GetCommonData(ZZ1031DetailModel detailModel) 場所 C:\SRSTraining\SRSSystem\SRSSystem\ZZ\ZZ1031\Business\ZZ1031DetailRule.vb:行 102
+   場所 System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   場所 System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   場所 SRS.Standards.MvcFramework.Core.Facade.FacadeBase.ProcessMessage(IMethodCallMessage callMessage) 場所 C:\svn\!!標準テンプレート\ASP.NET標準テンプレート\trunk\SRS\Standards\MVCFramework\Core\Facade\FacadeBase.vb:行 120
+

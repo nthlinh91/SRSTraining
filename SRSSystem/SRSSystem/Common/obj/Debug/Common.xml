@@ -1,0 +1,1493 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Common
+</name>
+</assembly>
+<members>
+<member name="T:SRSSystem.Common.My.Resources.Resources">
+<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member>
+<member name="P:SRSSystem.Common.My.Resources.Resources.ResourceManager">
+<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member>
+<member name="P:SRSSystem.Common.My.Resources.Resources.Culture">
+<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member>
+<member name="T:SRSSystem.Common.Constant.CommonConstant">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 業務共通 定数クラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="F:SRSSystem.Common.Constant.CommonConstant.LiteralYenMark">
+ <summary>
+ 円マーク(\)
+ </summary>
+</member>
+<member name="F:SRSSystem.Common.Constant.CommonConstant.LiteralSlash">
+ <summary>
+ スラッシュ(/)
+ </summary>
+</member>
+<member name="F:SRSSystem.Common.Constant.CommonConstant.UserConfigSectionName">
+ <summary>
+ ユーザ設定用のセクション名。Global.asax にて使用。
+ </summary>
+</member>
+<member name="T:SRSSystem.Common.Login.Business.LoginFacade">
+ <userName>SRS</userName>
+ <sysName>トレニンーグ</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ ログイン用業務Facadeクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-09, 新規作成
+ </Version>
+ <remarks>必要に応じて各処理を上書きしてください</remarks>
+</member>
+<member name="M:SRSSystem.Common.Login.Business.LoginFacade.OnLogin(SRS.Standards.MvcFramework.Core.Security.AuthenticationModel)">
+ <summary>
+ ログイン処理(メイン処理)
+ </summary>
+ <param name="authModel">認証管理モデル</param>
+ <returns>ログイン判定(ログインOKであればTrueを返す)</returns>
+ <remarks>業務側で必要に応じて上書きを行う</remarks>
+</member>
+<member name="M:SRSSystem.Common.Login.Business.LoginFacade.RegulationCheck(SRS.Standards.MvcFramework.Core.Security.SecurityRegulationModel)">
+ <summary>
+ 業務規制チェック
+ </summary>
+ <param name="regulationModel">業務権限・業務規制管理モデル</param>
+ <returns>業務権限・業務規制管理モデル</returns>
+</member>
+<member name="M:SRSSystem.Common.Login.Business.LoginFacade.GetPermission">
+ <summary>
+ 権限を取得
+ </summary>
+ <returns>業務権限・業務規制管理モデル</returns>
+</member>
+<member name="T:SRSSystem.Common.Login.Business.LoginRule">
+ <userName>SRS</userName>
+ <sysName>トレニンーグ</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ ログイン Ruleクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-09, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Login.Business.LoginRule.GetAuthentication(SRS.Standards.MvcFramework.Core.Security.AuthenticationModel)">
+ <summary>
+ 認証を実行し、ユーザ情報を取得します。
+ </summary>
+ <param name="authModel">認証画面モデル。</param>
+ <returns>認証成功したユーザ情報モデル。</returns>
+</member>
+<member name="M:SRSSystem.Common.Login.Business.LoginRule.SetUserInfo(SRS.Standards.MvcFramework.Core.Security.AuthenticationModel,SRSSystem.Common.Login.Model.LoginModel)">
+ <summary>
+ ユーザ基本情報を認証画面モデルに設定します。
+ </summary>
+ <param name="authModel">認証画面モデル</param>
+ <param name="userModel">ユーザ情報モデル</param>
+</member>
+<member name="M:SRSSystem.Common.Login.Business.LoginRule.IncrementLoginFailedCount">
+ <summary>
+ ログイン失敗回数を増加
+ </summary>
+</member>
+<member name="M:SRSSystem.Common.Login.Business.LoginRule.ClearLoginFailedCount">
+ <summary>
+ ログイン失敗回数をクリア
+ </summary>
+</member>
+<member name="M:SRSSystem.Common.Login.Business.LoginRule.CheckLoginFailedLockDown(SRS.Standards.MvcFramework.Core.Security.AuthenticationModel)">
+ <summary>
+ ログイン失敗回数をチェックし、3回以上になっていればエラーを設定する。
+ </summary>
+ <param name="model">認証画面モデル</param>
+ <returns>ログイン失敗回数が3回未満ならば <c>True</c></returns>
+</member>
+<member name="M:SRSSystem.Common.Login.Business.LoginRule.OnRegulationCheck(SRS.Standards.MvcFramework.Core.Security.SecurityRegulationModel)">
+ <summary>
+ 業務規制チェック(メイン処理)
+ </summary>
+ <param name="regulationModel">業務権限・業務規制管理モデル</param>
+ <returns>業務規制チェック結果(チェックＯＫ時:True)</returns>
+ <remarks>業務側で必要に応じて上書きを行う</remarks>
+</member>
+<member name="T:SRSSystem.Common.Login.Constant.LoginConstant">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ ログイン画面用 定数クラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="F:SRSSystem.Common.Login.Constant.LoginConstant.LoginFailureKey">
+ <summary>ログイン失敗回数を覚えておくためのセッションキー文字列</summary>
+</member>
+<member name="F:SRSSystem.Common.Login.Constant.LoginConstant.LoginFailureMax">
+ <summary>ログイン失敗を許す回数。</summary>
+</member>
+<member name="T:SRSSystem.Common.Login.DataAccess.LoginDataAccess">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ ログイン データアクセスクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-05, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Login.DataAccess.LoginDataAccess.GetAuthentication(SRS.Standards.MvcFramework.Core.Security.AuthenticationModel)">
+ <summary>
+ 認証情報取得処理
+ </summary>
+ <param name="authModel">認証モデル</param>
+ <returns>確認済認証モデルの集合</returns>
+</member>
+<member name="T:SRSSystem.Common.Login.Model.GyomuKiseiModel">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 業務規制データ取得用モデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.GyomuKiseiModel.GYOMUKISEIID">
+ <summary>
+ 業務規制ＩＤ
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.GyomuKiseiModel.STARTYMD">
+ <summary>
+ 開始日付
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.GyomuKiseiModel.STARTHHMM">
+ <summary>
+ 開始時間
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.GyomuKiseiModel.ENDYMD">
+ <summary>
+ 終了日付
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.GyomuKiseiModel.ENDHHMM">
+ <summary>
+ 終了時間
+ </summary>
+</member>
+<member name="T:SRSSystem.Common.Login.Model.LoginModel">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ ログインID情報モデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.LoginModel.Locale">
+ <summary>
+ 表示言語。
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.LoginModel.YmdFormat">
+ <summary>
+ 日付フォーマット。
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.LoginModel.DecimalPoint">
+ <summary>
+ 小数点記号。
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.LoginModel.NumberDelimiter">
+ <summary>
+ 数値の桁区切り記号。
+ </summary>
+</member>
+<member name="F:SRSSystem.Common.Login.Model.LoginModel._loginCulture">
+ <summary>ログイン画面の表示言語(内部値)</summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.LoginModel.LoginCulture">
+ <summary>ログイン画面の表示言語</summary>
+</member>
+<member name="T:SRSSystem.Common.Login.Model.PermissionModel">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 権限データ取得用モデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.PermissionModel.CanInsertFlag">
+ <summary>
+ 登録可能フラグ
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.PermissionModel.CanUpdateFlag">
+ <summary>
+ 更新可能フラグ
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.PermissionModel.CanDeleteFlag">
+ <summary>
+ 削除可能フラグ
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Login.Model.PermissionModel.CanSearchFlag">
+ <summary>
+ 検索可能フラグ
+ </summary>
+</member>
+<member name="T:SRSSystem.Common.Menu.Business.MenuFacade">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ メニュー画面　Facadeクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Menu.Business.MenuFacade.Init">
+ <summary>
+ メニュー画面 初期化処理
+ </summary>
+ <returns>メニュー画面モデル</returns>
+</member>
+<member name="T:SRSSystem.Common.Menu.Business.MenuRule">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ メニュー画面　Ruleクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Menu.Business.MenuRule.GetMenuData(SRSSystem.Common.Menu.Model.MenuModel)">
+ <summary>
+ メニュー情報取得
+ </summary>
+ <param name="menuModel">メニュー画面モデル</param>
+ <returns>メニュー画面モデル</returns>
+</member>
+<member name="M:SRSSystem.Common.Menu.Business.MenuRule.GetMenuDetail(SRSSystem.Common.Menu.Model.MenuElementModel)">
+ <summary>
+  メニュー項目情報取得
+ </summary>
+ <param name="memuModel">メニュー項目モデル</param>
+ <returns>メニュー項目モデル</returns>
+</member>
+<member name="M:SRSSystem.Common.Menu.Business.MenuRule.GetNoticeData(SRSSystem.Common.Menu.Model.MenuModel)">
+ <summary>
+ お知らせ取得
+ </summary>
+ <param name="menuModel">メニュー画面モデル</param>
+ <returns>メニュー画面モデル</returns>
+</member>
+<member name="T:SRSSystem.Common.Menu.Constant.MenuConstant">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ メニュー画面 定数クラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="F:SRSSystem.Common.Menu.Constant.MenuConstant.SubMenu">
+ <summary>
+ サブメニュー[メニュー区分]
+ </summary>
+</member>
+<member name="T:SRSSystem.Common.Menu.DataAccess.MenuDataAccess">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ メニュー画面 データアクセスクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-05, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Menu.DataAccess.MenuDataAccess.GetMenuData(System.String)">
+ <summary>
+ メニュー項目取得
+ </summary>
+ <param name="identifyId">業務識別ID</param>
+ <returns>>管理業務モデルの集合</returns>
+</member>
+<member name="T:SRSSystem.Common.Menu.Model.MenuElementModel">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ メニュー画面 メニュー項目モデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.Common.Menu.Model.MenuElementModel.MenuId">
+ <summary>
+ メニューID
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Menu.Model.MenuElementModel.Url">
+ <summary>
+ URL
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Menu.Model.MenuElementModel.MenuType">
+ <summary>
+ メニュー区分
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Menu.Model.MenuElementModel.Title">
+ <summary>
+ タイトル
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Menu.Model.MenuElementModel.Children">
+ <summary>
+ 子項目
+ </summary>
+</member>
+<member name="T:SRSSystem.Common.Menu.Model.MenuModel">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ メニュー画面　メニュー画面モデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.Common.Menu.Model.MenuModel.FuncName">
+ <summary>
+ 画面タイトル
+ </summary>
+ <remarks>固定文言を設定</remarks>
+</member>
+<member name="P:SRSSystem.Common.Menu.Model.MenuModel.WindowTitle">
+ <summary>
+ Windowタイトル
+ </summary>
+ <remarks>固定文言を設定</remarks>
+</member>
+<member name="P:SRSSystem.Common.Menu.Model.MenuModel.MenuData">
+ <summary>
+ メニューデータ
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Menu.Model.MenuModel.NoticeMessage">
+ <summary>
+ お知らせメッセージ
+ </summary>
+</member>
+<member name="T:SRSSystem.Common.Utilities.Business.UtilityRule">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ ユーティリティ Ruleクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Business.UtilityRule.GetDataSelect(SRSSystem.Common.Utilities.Model.DataSelectModel)">
+ <summary>
+ データセレクトを取得します。
+ </summary>
+ <param name="viewModel">画面モデル</param>
+ <returns>データセレクト項目モデル</returns>
+</member>
+<member name="T:SRSSystem.Common.Utilities.Business.UtilityFacade">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ ユーティリティ Facadeクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Business.UtilityFacade.GetDataSelect(SRSSystem.Common.Utilities.Model.DataSelectModel)">
+ <summary>
+ データセレクトを取得します。
+ </summary>
+ <param name="viewModel">画面モデル</param>
+ <returns>データセレクト項目モデル</returns>
+</member>
+<member name="T:SRSSystem.Common.Utilities.DataAccess.UtilityDataAccess">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ ユーティリティ データアクセスクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DataAccess.UtilityDataAccess.CountUpActivity(System.String)">
+ <summary>
+ 機能IDに対するアクセス回数を1増やします。
+ </summary>
+ <param name="menuId">機能ID。</param>
+ <returns>更新データ数。</returns>
+</member>
+<member name="T:SRSSystem.Common.Utilities.DBUtility">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ システム基盤に関係するユーティリティ関数を定義します。
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DBUtility.#ctor">
+ <summary>
+ ダミーコンストラクタ
+ </summary>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DBUtility.LogDownloadFile(SRS.Standards.MvcFramework.Core.Facade.IViewModel)">
+ <summary>
+ ダウンロードしたファイルの履歴をログに記録します。
+ </summary>
+ <param name="viewModel">画面モデル。</param>
+ <remarks>ファイルの記録は、Filter経由で行う
+ 仮実装。最終的にはテーブルに記録する。</remarks>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DBUtility.CountUpActivity(System.String)">
+ <summary>
+ 機能IDに対するアクセス回数を1増やします。
+ </summary>
+ <param name="menuId">機能ID。</param>
+ <returns>アクセス回数。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ExcelUtility.MapTo``1(System.String)">
+ <summary>
+ Excelファイルのデータをモデルにマップします。指定されたファイルがないなど、読み取り処理ができない場合は、 null が返ります。
+ </summary>
+ <param name="fileName">ファイルパス</param>
+ <returns>モデルにマップしたデータの一覧</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ExcelUtility.LoadWorkbook(System.String)">
+ <summary>
+ 指定されたファイル名から Excel Workbook をロードします。
+ </summary>
+ <param name="fileName">読み取るエクセルの <see cref="T:OfficeOpenXml.ExcelWorkbook"/> インスタンス</param>
+ <returns>読み取られたエクセルの <see cref="T:OfficeOpenXml.ExcelWorkbook"/> インスタンス</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ExcelUtility.LoadWorksheet(OfficeOpenXml.ExcelWorkbook)">
+ <summary>
+ ブックから先頭のシートをロードします。
+ </summary>
+ <param name="workbook">シートを取得するためのブック</param>
+ <returns>ブックの先頭にあるシート</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ExcelUtility.CheckSheetData``1(OfficeOpenXml.ExcelWorksheet,System.Int32,System.Int32)">
+ <summary>
+ シートとモデルの定義に不一致があるかどうかをチェックします。
+ </summary>
+ <typeparam name="T">モデルの型</typeparam>
+ <param name="worksheet">読み取るシート</param>
+ <param name="rowNum">データの行数</param>
+ <param name="colNum">データのカラム数</param>
+ <returns>チェック結果。不一致がない場合は true 、そうでない場合は false</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ExcelUtility.LoadData``1(OfficeOpenXml.ExcelWorksheet,System.Int32,System.Int32)">
+ <summary>
+ シートからデータをロードして、モデルにマッピングします。
+ </summary>
+ <typeparam name="T">モデルの型</typeparam>
+ <param name="worksheet">読み取るシート</param>
+ <param name="rowNum">データの行数</param>
+ <param name="colNum">データのカラム数</param>
+ <returns>シートから読み取ったデータがマッピングされたモデルの一覧</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ExcelUtility.MappingData``1(System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,OfficeOpenXml.ExcelRange}})">
+ <summary>
+ 読み込んだデータをモデルへマップします。
+ </summary>
+ <param name="excelRows">すべてのデータ行</param>
+ <returns>モデルへマップしたデータの一覧</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ExcelUtility.WriteLog(System.String,System.Object[])">
+ <summary>
+ ログを出力します。
+ </summary>
+ <param name="message">メッセージ</param>
+ <param name="args">置き換え文字</param>
+</member>
+<member name="T:SRSSystem.Common.Utilities.Extensions">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 各型の Extension を定義します。
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Extensions.Validate(SRS.Standards.MvcFramework.Core.Facade.IViewModel)">
+ <summary>
+ モデルをモデル定義に設定した属性に従っているかどうかを検査します。
+ </summary>
+ <param name="model">検査対象モデル。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Extensions.ValidateString``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,SRS.Standards.MvcFramework.Core.MVC.CharacterType,System.Int32,System.Int32)">
+ <summary>
+ 対象モデルのメンバを文字列要素として検査します。
+ </summary>
+ <typeparam name="T">対象モデルの型。</typeparam>
+ <typeparam name="TValue">対象メンバの型。</typeparam>
+ <param name="model">検査対象モデル。</param>
+ <param name="memberFunc">対象メンバを取得するための関数表現。</param>
+ <param name="required">必須項目かどうか。</param>
+ <param name="type">文字列の種類。</param>
+ <param name="minLength">最小桁数。指定しない場合は 0。</param>
+ <param name="maxLength">最大桁数。指定しない場合は 0。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Extensions.ValidateNumber``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.Double,System.Double,System.Int32)">
+ <summary>
+ 対象モデルのメンバを数値要素として検査します。
+ </summary>
+ <typeparam name="T">対象モデルの型。</typeparam>
+ <typeparam name="TValue">対象メンバの型。</typeparam>
+ <param name="model">検査対象モデル。</param>
+ <param name="memberFunc">対象メンバを取得するための関数表現。</param>
+ <param name="required">必須項目かどうか。</param>
+ <param name="minValue">最小値。</param>
+ <param name="maxValue">最大値。</param>
+ <param name="decimalLength">最大小数桁。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Extensions.ValidateYMD``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean)">
+ <summary>
+ 対象モデルのメンバを年月日要素として検査します。
+ </summary>
+ <typeparam name="T">対象モデルの型。</typeparam>
+ <typeparam name="TValue">対象メンバの型。</typeparam>
+ <param name="model">検査対象モデル。</param>
+ <param name="memberFunc">対象メンバを取得するための関数表現。</param>
+ <param name="required">必須項目かどうか。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Extensions.ValidateYM``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean)">
+ <summary>
+ 対象モデルのメンバを年月要素として検査します。
+ </summary>
+ <typeparam name="T">対象モデルの型。</typeparam>
+ <typeparam name="TValue">対象メンバの型。</typeparam>
+ <param name="model">検査対象モデル。</param>
+ <param name="memberFunc">対象メンバを取得するための関数表現。</param>
+ <param name="required">必須項目かどうか。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Extensions.ValidateHMS``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean)">
+ <summary>
+ 対象モデルのメンバを年月要素として検査します。
+ </summary>
+ <typeparam name="T">対象モデルの型。</typeparam>
+ <typeparam name="TValue">対象メンバの型。</typeparam>
+ <param name="model">検査対象モデル。</param>
+ <param name="memberFunc">対象メンバを取得するための関数表現。</param>
+ <param name="required">必須項目かどうか。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Extensions.SetMessage(SRS.Standards.MvcFramework.Core.Facade.IViewModel,System.String,System.String,System.String[])">
+ <summary>
+ モデルにメッセージを設定します。
+ メッセージIDの5文字目を見てエラーレベルを判定します。(N: 通常、W: 警告、E: エラー、F: 致命的)
+ </summary>
+ <param name="model">モデル</param>
+ <param name="propertyName">対象のプロパティ名(階層込で設定する)</param>
+ <param name="messageId">メッセージID</param>
+ <param name="messageParams">メッセージ置換文字列(メッセージIDも可)</param>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Extensions.SetError(SRS.Standards.MvcFramework.Core.Facade.IViewModel,System.String,System.String,System.String[])">
+ <summary>
+ モデルにエラーとして項目エラー及びメッセージを設定します。
+ </summary>
+ <param name="model">モデル</param>
+ <param name="propertyName">対象のプロパティ名(階層込で設定する)</param>
+ <param name="messageId">メッセージID</param>
+ <param name="messageParams">メッセージ置換文字列(メッセージIDも可)</param>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Extensions.SetWarn(SRS.Standards.MvcFramework.Core.Facade.IViewModel,System.String,System.String,System.String[])">
+ <summary>
+ モデルに警告として項目エラー及びメッセージを設定します。
+ </summary>
+ <param name="model">モデル</param>
+ <param name="propertyName">対象のプロパティ名(階層込で設定する)</param>
+ <param name="messageId">メッセージID</param>
+ <param name="messageParams">メッセージ置換文字列(メッセージIDも可)</param>
+</member>
+<member name="M:SRSSystem.Common.Utilities.Extensions.SetFatal(SRS.Standards.MvcFramework.Core.Facade.IViewModel,System.String,System.String,System.String[])">
+ <summary>
+ モデルに致命的として項目エラー及びメッセージを設定します。
+ </summary>
+ <param name="model">モデル</param>
+ <param name="propertyName">対象のプロパティ名(階層込で設定する)</param>
+ <param name="messageId">メッセージID</param>
+ <param name="messageParams">メッセージ置換文字列(メッセージIDも可)</param>
+</member>
+<member name="T:SRSSystem.Common.Utilities.InformationUtility">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ システム基盤に関係するユーティリティ関数を定義します。
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Utilities.InformationUtility.#ctor">
+ <summary>
+ ダミーコンストラクタ
+ </summary>
+</member>
+<member name="M:SRSSystem.Common.Utilities.InformationUtility.GetUserYmdFormat">
+ <summary>
+ ログインしているユーザの年月日フォーマットを取得します。
+ </summary>
+ <returns>年月日フォーマット。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.InformationUtility.GetUserYmFormat">
+ <summary>
+ ログインしているユーザの年月フォーマットを取得します。
+ </summary>
+ <returns>年月フォーマット。</returns>
+</member>
+<member name="T:SRSSystem.Common.Utilities.Model.DataSelectModel">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ データセレクト取得用モデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.Common.Utilities.Model.DataSelectModel.DataSelectName">
+ <summary>
+ データセレクト名称
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Utilities.Model.DataSelectModel.Parameters">
+ <summary>
+ 検索パラメータ
+ </summary>
+</member>
+<member name="T:SRSSystem.Common.Utilities.Model.DataSelectItemModel">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ データセレクト取得データモデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.Common.Utilities.Model.DataSelectItemModel.Text">
+ <summary>表示テキスト</summary>
+</member>
+<member name="P:SRSSystem.Common.Utilities.Model.DataSelectItemModel.Value">
+ <summary>値</summary>
+</member>
+<member name="T:SRSSystem.Common.Utilities.NumberUtility">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 数値に関係するユーティリティ関数を定義します。
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.#ctor">
+ <summary>
+ ダミーコンストラクタ
+ </summary>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.GetNumberFormatInfo">
+ <summary>
+ ユーザの言語設定から数値整形情報を作成します。
+ </summary>
+ <returns>数値整形情報。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.ToLocaleString(System.String)">
+ <summary>
+ 数値をユーザの言語設定に従って文字列に変換します。
+ </summary>
+ <param name="value">変換対象の数値。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.ToLocaleString(System.String,System.String)">
+ <summary>
+ 数値をユーザの言語設定に従って文字列に変換します。
+ </summary>
+ <param name="value">変換対象の数値。</param>
+ <param name="format">フォーマット文字列。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.ToLocaleString(System.Decimal)">
+ <summary>
+ 数値をユーザの言語設定に従って文字列に変換します。
+ </summary>
+ <param name="value">変換対象の数値。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.ToLocaleString(System.Decimal,System.Int32,System.Boolean)">
+ <summary>
+ 数値をユーザの言語設定に従って文字列に変換します。
+ </summary>
+ <param name="value">変換対象の数値。</param>
+ <param name="decimalLength">小数点以下の桁数。</param>
+ <param name="delimiter">3桁毎の桁区切り記号を入れる場合 <c>True</c>。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.ToLocaleString(System.Decimal,System.String)">
+ <summary>
+ 数値をユーザの言語設定に従って文字列に変換します。
+ </summary>
+ <param name="value">変換対象の数値。</param>
+ <param name="format">フォーマット文字列。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.ToLocaleString(System.Int32)">
+ <summary>
+ 数値をユーザの言語設定に従って文字列に変換します。
+ </summary>
+ <param name="value">変換対象の数値。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.ToLocaleString(System.Int32,System.String)">
+ <summary>
+ 数値をユーザの言語設定に従って文字列に変換します。
+ </summary>
+ <param name="value">変換対象の数値。</param>
+ <param name="format">フォーマット文字列。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.CanConvertToDecimal(System.String)">
+ <summary>
+ 数値文字列を数値に変換できるかどうかを判定します。
+ </summary>
+ <param name="value">変換対象の数値文字列。</param>
+ <returns>変換可能な場合 <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.ParseDecimal(System.String)">
+ <summary>
+ 数値文字列をユーザの言語設定に従って数値に変換します。
+ </summary>
+ <param name="value">変換対象の数値文字列。</param>
+ <returns>変換後の数値文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.RoundUpString(System.String,System.Int32,System.Boolean)">
+ <summary>
+ 文字列数値の切り上げ (0から遠いほうに丸める)
+ </summary>
+ <param name="value">変換対象の文字列数値。</param>
+ <param name="decimalLength">小数点以下の桁数。</param>
+ <param name="delimiter">3桁毎の桁区切り記号を入れる場合 <c>True</c>。</param>
+ <returns>処理後の文字列数値</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.RoundDownString(System.String,System.Int32,System.Boolean)">
+ <summary>
+ 文字列数値の切り捨て (0に近いほうに丸める)
+ </summary>
+ <param name="value">変換対象の文字列数値。</param>
+ <param name="decimalLength">小数点以下の桁数。</param>
+ <param name="delimiter">3桁毎の桁区切り記号を入れる場合 <c>True</c>。</param>
+ <returns>処理後の文字列数値</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.RoundHalfEvenString(System.String,System.Int32,System.Boolean)">
+ <summary>
+ 文字列数値の四捨五入 (銀行丸め)
+ </summary>
+ <param name="value">変換対象の文字列数値。</param>
+ <param name="decimalLength">小数点以下の桁数。</param>
+ <param name="delimiter">3桁毎の桁区切り記号を入れる場合 <c>True</c>。</param>
+ <returns>処理後の文字列数値</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.NumberUtility.RoundHalfUpString(System.String,System.Int32,System.Boolean)">
+ <summary>
+ 文字列数値の四捨五入 (中間値は0から遠いほうに丸める)
+ </summary>
+ <param name="value">変換対象の文字列数値。</param>
+ <param name="decimalLength">小数点以下の桁数。</param>
+ <param name="delimiter">3桁毎の桁区切り記号を入れる場合 <c>True</c>。</param>
+ <returns>処理後の文字列数値</returns>
+</member>
+<member name="T:SRSSystem.Common.Utilities.UserConfig">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ ユーザ定義設定情報を取得します。
+ ここに定義したプロパティ名と、 MVCApplication/Config/User.config のプロパティ名を一致させると、
+ 自動的に値を読み込んで利用できます。
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Utilities.UserConfig.Instance">
+ <summary>
+ 設定インスタンスを取得します。
+ </summary>
+ <returns>設定インスタンス。</returns>
+</member>
+<member name="T:SRSSystem.Common.Utilities.ValidationUtility">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 出力チェックに関係するユーティリティ関数を定義します。
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.#ctor">
+ <summary>
+ ダミーコンストラクタ
+ </summary>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.ValidateModel(SRS.Standards.MvcFramework.Core.Facade.IViewModel,System.Object,System.String)">
+ <summary>
+ モデルをモデル定義に設定した属性に従っているかどうかを検査します。
+ </summary>
+ <param name="model">エラーを設定するモデル。</param>
+ <param name="targetObject">検査対象オブジェクト。</param>
+ <param name="objectPath">ルート要素から検査対象オブジェクトに至るまでのパス。エラーに設定するプロパティ名に使用されます。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.ValidateRequired(SRS.Standards.MvcFramework.Core.Facade.IViewModel,SRS.Standards.MvcFramework.Core.MVC.SRSValidationAttribute,System.String,System.String,System.String)">
+ <summary>
+ 必須かどうかをチェックします。
+ </summary>
+ <param name="model">エラーを設定するモデル。</param>
+ <param name="attr">バリデーション属性。</param>
+ <param name="value">値。</param>
+ <param name="displayName">表示名。</param>
+ <param name="propertyName">プロパティ名。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.ValidateString(SRS.Standards.MvcFramework.Core.Facade.IViewModel,SRS.Standards.MvcFramework.Core.MVC.SRSStringValidationAttribute,System.String,System.String,System.String)">
+ <summary>
+ 文字列要素としてプロパティをチェックします。
+ </summary>
+ <param name="model">エラーを設定するモデル。</param>
+ <param name="attr">バリデーション属性。</param>
+ <param name="value">値。</param>
+ <param name="displayName">表示名。</param>
+ <param name="propertyName">プロパティ名。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.ValidateNumber(SRS.Standards.MvcFramework.Core.Facade.IViewModel,SRS.Standards.MvcFramework.Core.MVC.SRSNumberValidationAttribute,System.String,System.String,System.String)">
+ <summary>
+ 数値要素としてプロパティをチェックします。
+ </summary>
+ <param name="model">エラーを設定するモデル。</param>
+ <param name="attr">バリデーション属性。</param>
+ <param name="value">値。</param>
+ <param name="displayName">表示名。</param>
+ <param name="propertyName">プロパティ名。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.ValidateYMD(SRS.Standards.MvcFramework.Core.Facade.IViewModel,SRS.Standards.MvcFramework.Core.MVC.SRSYMDValidationAttribute,System.String,System.String,System.String)">
+ <summary>
+ 年月日要素としてプロパティをチェックします。
+ </summary>
+ <param name="model">エラーを設定するモデル。</param>
+ <param name="attr">バリデーション属性。</param>
+ <param name="value">値。</param>
+ <param name="displayName">表示名。</param>
+ <param name="propertyName">プロパティ名。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.ValidateYM(SRS.Standards.MvcFramework.Core.Facade.IViewModel,SRS.Standards.MvcFramework.Core.MVC.SRSYMValidationAttribute,System.String,System.String,System.String)">
+ <summary>
+ 年月要素としてプロパティをチェックします。
+ </summary>
+ <param name="model">エラーを設定するモデル。</param>
+ <param name="attr">バリデーション属性。</param>
+ <param name="value">値。</param>
+ <param name="displayName">表示名。</param>
+ <param name="propertyName">プロパティ名。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.ValidateHMS(SRS.Standards.MvcFramework.Core.Facade.IViewModel,SRS.Standards.MvcFramework.Core.MVC.SRSHMSValidationAttribute,System.String,System.String,System.String)">
+ <summary>
+ 時分秒要素としてプロパティをチェックします。
+ </summary>
+ <param name="model">エラーを設定するモデル。</param>
+ <param name="attr">バリデーション属性。</param>
+ <param name="value">値。</param>
+ <param name="displayName">表示名。</param>
+ <param name="propertyName">プロパティ名。</param>
+ <returns>問題がないとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.CreateErrorList(System.Collections.Generic.IEnumerable{SRS.Standards.MvcFramework.Core.Facade.IViewModel},System.String,System.String)">
+ <summary>
+ エラーリストを作成します。
+ </summary>
+ <param name="models">エラーを含んだモデルの集合</param>
+ <param name="fileName">出力ファイル名 (指定されない場合、 ErrorList_yyyyMMddHHmmss.xlsx となります)</param>
+ <param name="sheetName">出力シート名</param>
+ <returns>エラーリストのファイルパス</returns>
+ <remarks>モデル内容を自動的に全て出力します。</remarks>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.GetPropertyDisplayName(System.Type,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+ <summary>
+ 型情報から、プロパティフルネームとプロパティ表示名の辞書を取得します。
+ </summary>
+ <param name="type">型情報</param>
+ <param name="prefix">作成するフルネームの前に付けるプレフィックス。</param>
+ <param name="container">結果を返すためのオブジェクト。指定されなければ新規作成します。</param>
+ <returns>プロパティの表示名</returns>
+ <remarks>型の分割に対応</remarks>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.GetModelValue(System.Object,System.String)">
+ <summary>
+ モデルから、プロパティフルネームを用いて値を取得する
+ </summary>
+ <param name="model">取得対象のモデル</param>
+ <param name="propertyName">プロパティフルネーム</param>
+ <returns>プロパティ値</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.ValidationUtility.SetModelValue(System.Object,System.String,System.Object)">
+ <summary>
+ モデルから、プロパティフルネームを用いて値を設定する
+ </summary>
+ <param name="model">取得対象のモデル</param>
+ <param name="propertyName">プロパティフルネーム</param>
+ <param name="value">値</param>
+</member>
+<member name="T:SRSSystem.Common.Utilities.DateTimeUtility">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 日時に関係するユーティリティ関数を定義します。
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.#ctor">
+ <summary>
+ ダミーコンストラクタ
+ </summary>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.ToDateString(System.String)">
+ <summary>
+ 文字列を日付と見做し、ユーザの言語設定に従って日付文字列に変換します。
+ </summary>
+ <param name="value">変換対象の日付。※DBから、日付を文字列として取得した場合を想定</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.ToDateString(System.Nullable{System.DateTime})">
+ <summary>
+ 日付をユーザの言語設定に従って日付文字列に変換します。
+ </summary>
+ <param name="value">変換対象の日付。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.ToDateStringYM(System.Nullable{System.DateTime})">
+ <summary>
+ 日付をユーザの言語設定に従って年月文字列に変換します。
+ </summary>
+ <param name="value">変換対象の日付。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.ToDateStringMD(System.Nullable{System.DateTime})">
+ <summary>
+ 日付をユーザの言語設定に従って月日文字列に変換します。
+ </summary>
+ <param name="value">変換対象の日付。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.YMDToDateString(System.String)">
+ <summary>
+ yyyyMMdd文字列日付をユーザの言語設定に従って日付文字列に変換します。
+ </summary>
+ <param name="ymdValue">変換対象の日付文字列。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.YMToDateString(System.String)">
+ <summary>
+ yyyyMM文字列日付をユーザの言語設定に従って日付文字列に変換します。
+ </summary>
+ <param name="ymValue">変換対象の日付文字列。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.MDToDateString(System.String)">
+ <summary>
+ MMdd文字列日付をユーザの言語設定に従って日付文字列に変換します。
+ </summary>
+ <param name="mdValue">変換対象の日付文字列。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.ToDateTimeString(System.String)">
+ <summary>
+ 文字列を日付と見做し、ユーザの言語設定に従って日時文字列に変換します。
+ </summary>
+ <param name="value">変換対象の日付。※DBから、日付を文字列として取得した場合を想定</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.ToDateTimeString(System.Nullable{System.DateTime})">
+ <summary>
+ 日付をユーザの言語設定に従って日時文字列に変換します。
+ </summary>
+ <param name="value">変換対象の日付。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.HMSToTimeString(System.String)">
+ <summary>
+ HHmmss文字列時刻をユーザの言語設定に従って時刻文字列に変換します。
+ </summary>
+ <param name="hmsValue">変換対象の日付文字列。</param>
+ <returns>変換後文字列。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.ParseYMD(System.String)">
+ <summary>
+ 文字列日付を <see cref="T:System.DateTime"/> に変換します。
+ </summary>
+ <param name="ymd">対象の文字列日付。</param>
+ <returns>変換された日付。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.ParseYM(System.String)">
+ <summary>
+ yyyyMM文字列日付を <see cref="T:System.DateTime"/> に変換します。日付は1固定です。
+ </summary>
+ <param name="ym">対象の文字列日付。</param>
+ <returns>変換された日付。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.ParseYMDNullable(System.String)">
+ <summary>
+ 文字列日付を <see cref="T:System.DateTime"/> に変換します。
+ </summary>
+ <param name="ymd">対象の文字列日付。</param>
+ <returns>変換された日付。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.IsValidYMD(System.String)">
+ <summary>
+ 文字列日付が yyyyMMdd 形式で正常な日付かどうかを判定します。
+ </summary>
+ <param name="ymd">対象の文字列日付。</param>
+ <returns>正常な日付のとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.IsValidYM(System.String)">
+ <summary>
+ 文字列日付が yyyyMM 形式で正常な日付かどうかを判定します。
+ </summary>
+ <param name="ym">対象の文字列日付。</param>
+ <returns>正常な日付のとき <c>True</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.ToYMDString(System.DateTime)">
+ <summary>
+ 日付を yyyyMMdd 形式の文字列に変換します。
+ </summary>
+ <param name="targetDate">対象日付。</param>
+ <returns>文字列日付。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.IsValidHMS(System.String)">
+ <summary>
+ 正常なHHmmss形式かどうかを判定します。
+ </summary>
+ <param name="value">時刻を表す文字列。</param>
+ <returns>正常なとき <c>True</c>。不正なとき<c>False</c>。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.AddDaysToYMD(System.String,System.Int32)">
+ <summary>
+ 文字列日付(yyyyMMdd)を指定した日数だけずらします。
+ </summary>
+ <param name="ymd">対象の文字列日付。</param>
+ <param name="days">追加する日数。負数も可。</param>
+ <returns>調整後の文字列日付。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.AddMonthsToYM(System.String,System.Int32)">
+ <summary>
+ 文字列日付(yyyyMM)を指定した月数だけずらします。
+ </summary>
+ <param name="ym">対象の文字列日付。</param>
+ <param name="months">追加する日数。負数も可。</param>
+ <returns>調整後の文字列日付。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.GetYMDFirstDateOfMonth(System.String)">
+ <summary>
+ 月初日を文字列日付で取得します。
+ </summary>
+ <param name="ymd">対象の文字列日付。</param>
+ <returns>調整後の文字列日付。</returns>
+</member>
+<member name="M:SRSSystem.Common.Utilities.DateTimeUtility.GetYMDLastDateOfMonth(System.String)">
+ <summary>
+ 月末日を文字列日付で取得します。
+ </summary>
+ <param name="ymd">対象の文字列日付。</param>
+ <returns>調整後の文字列日付。</returns>
+</member>
+<member name="T:SRSSystem.Common.Wait.Business.WaitFacade">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 待ち画面用(サンプル)業務Facadeクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Wait.Business.WaitFacade.Init(System.String)">
+ <summary>
+ 待ち画面 初期化処理
+ </summary>
+ <param name="id">処理ID</param>
+ <returns>待ち画面モデル</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.Business.WaitFacade.Watch(SRSSystem.Common.Wait.Model.WaitModel)">
+ <summary>
+ 待ち画面 状態監視処理
+ </summary>
+ <param name="waitModel">待ち画面モデル</param>
+ <returns>待ち画面モデル</returns>
+</member>
+<member name="T:SRSSystem.Common.Wait.Business.WaitRule">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 待ち画面 Ruleクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Wait.Business.WaitRule.GetProcessStatus(SRSSystem.Common.Wait.Model.WaitModel)">
+ <summary>
+ 処理状態取得
+ </summary>
+ <param name="waitModel">待ち画面モデル</param>
+ <returns>待ち画面モデル</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.Business.WaitRule.GetProcessId">
+ <summary>
+ 処理ID採番処理
+ </summary>
+ <returns>採番された処理ID</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.Business.WaitRule.GetProcessFilePath(System.String)">
+ <summary>
+ 処理ID採番処理
+ </summary>
+ <param name="processId">処理ID</param>
+ <returns>採番された処理ID</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.Business.WaitRule.SetProcessStatus(System.String,SRSSystem.Common.Wait.Constant.ProcessType,SRSSystem.Common.Wait.Constant.ProcessStatus)">
+ <summary>
+ 処理状態設定
+ </summary>
+ <param name="processId">処理ID</param>
+ <param name="type">処理種別</param>
+ <param name="status">設定する状態</param>
+ <returns>待ち画面モデル</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.Business.WaitRule.SetProcessFilePath(System.String,System.String)">
+ <summary>
+ 処理IDに設定されたファイルパスを取得します。
+ </summary>
+ <param name="processId">処理ID</param>
+ <param name="filePath">設定するファイルパス</param>
+ <returns>採番された処理ID</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.Business.WaitRule.GetErrorStatus(System.Exception)">
+ <summary>
+ 例外に対応するエラー処理状態を返します。
+ </summary>
+ <param name="ex">例外オブジェクト</param>
+ <returns>エラー処理状態。</returns>
+</member>
+<member name="T:SRSSystem.Common.Wait.Constant.ProcessStatus">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 処理状態を表す列挙体
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="F:SRSSystem.Common.Wait.Constant.ProcessStatus.Processing">
+ <summary>処理中</summary>
+</member>
+<member name="F:SRSSystem.Common.Wait.Constant.ProcessStatus.Completed">
+ <summary>処理済</summary>
+</member>
+<member name="F:SRSSystem.Common.Wait.Constant.ProcessStatus.WarnList">
+ <summary>警告リスト付き処理済(アップロード用)</summary>
+</member>
+<member name="F:SRSSystem.Common.Wait.Constant.ProcessStatus.ExclusiveError">
+ <summary>異常終了(排他制御エラー)</summary>
+</member>
+<member name="F:SRSSystem.Common.Wait.Constant.ProcessStatus.ErrorList">
+ <summary>エラーリスト生成異常終了(アップロード用)</summary>
+</member>
+<member name="F:SRSSystem.Common.Wait.Constant.ProcessStatus.Aborted">
+ <summary>異常終了</summary>
+</member>
+<member name="T:SRSSystem.Common.Wait.Constant.ProcessType">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 処理種別を表す列挙体
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="F:SRSSystem.Common.Wait.Constant.ProcessType.Upload">
+ <summary>アップロード</summary>
+</member>
+<member name="F:SRSSystem.Common.Wait.Constant.ProcessType.Download">
+ <summary>ダウンロード</summary>
+</member>
+<member name="F:SRSSystem.Common.Wait.Constant.ProcessType.Process">
+ <summary>単純処理</summary>
+</member>
+<member name="T:SRSSystem.Common.Wait.DataAccess.WaitDataAccess">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 待ち画面 データアクセスクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.Common.Wait.DataAccess.WaitDataAccess.GetProcessId">
+ <summary>
+ 待ち画面 採番処理
+ </summary>
+ <returns>採番された処理ID</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.DataAccess.WaitDataAccess.InsertProcessDetail(System.String)">
+ <summary>
+ 待ち画面 管理テーブル挿入処理
+ </summary>
+ <param name="processId">処理ID</param>
+ <returns>処理件数</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.DataAccess.WaitDataAccess.GetProcessDetail(System.String)">
+ <summary>
+ 待ち画面 処理待ち詳細取得
+ </summary>
+ <param name="processId">処理ID</param>
+ <returns>処理詳細モデル</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.DataAccess.WaitDataAccess.SetProcessStatus(System.String,SRSSystem.Common.Wait.Constant.ProcessType,SRSSystem.Common.Wait.Constant.ProcessStatus)">
+ <summary>
+ 待ち画面 待ち状態設定
+ </summary>
+ <param name="processId">処理ID</param>
+ <param name="type">設定する処理種別</param>
+ <param name="status">設定する処理状態</param>
+ <returns>処理件数</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.DataAccess.WaitDataAccess.GetProcessFilePath(System.String)">
+ <summary>
+ 待ち画面 ファイルパス取得
+ </summary>
+ <param name="processId">処理ID</param>
+ <returns>ファイルパス</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.DataAccess.WaitDataAccess.SetProcessFilePath(System.String,System.String)">
+ <summary>
+ 待ち画面 ファイルパス設定
+ </summary>
+ <param name="processId">処理ID</param>
+ <param name="filePath">ファイルパス</param>
+ <returns>処理件数</returns>
+</member>
+<member name="T:SRSSystem.Common.Wait.Model.CTPROCESSWAIT">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 処理待ちテーブル用モデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.CTPROCESSWAIT.ProcessId">
+ <summary>
+ 処理ID
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.CTPROCESSWAIT.ProcessType">
+ <summary>
+ 処理区分
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.CTPROCESSWAIT.ProcessStatus">
+ <summary>
+ 処理状態
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.CTPROCESSWAIT.FileName">
+ <summary>
+ ファイル名
+ </summary>
+</member>
+<member name="M:SRSSystem.Common.Wait.Model.CTPROCESSWAIT.GetProcessType">
+ <summary>
+ ProcessType値を取得します。
+ </summary>
+ <returns>ProcessType値</returns>
+</member>
+<member name="M:SRSSystem.Common.Wait.Model.CTPROCESSWAIT.GetProcessStatus">
+ <summary>
+ ProcessStatus値を取得します。
+ </summary>
+ <returns>ProcessStatus値</returns>
+</member>
+<member name="T:SRSSystem.Common.Wait.Model.WaitModel">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>共通ライブラリ</subSysName>
+ <summary>
+ 待ち画面用(サンプル)モデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.WaitModel.ProcessId">
+ <summary>
+ 処理ID
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.WaitModel.Waiting">
+ <summary>
+ 現在待ち状態かどうか (Trueのとき待ち状態)
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.WaitModel.ProcessType">
+ <summary>
+ 処理種別
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.WaitModel.ProcessStatus">
+ <summary>
+ 処理状態
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.WaitModel.DisplayMessage">
+ <summary>
+ 待ち画面に表示するメッセージ
+ </summary>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.WaitModel.FuncName">
+ <summary>
+ 画面タイトル
+ </summary>
+ <remarks>既定文言を設定</remarks>
+</member>
+<member name="P:SRSSystem.Common.Wait.Model.WaitModel.WindowTitle">
+ <summary>
+ Windowタイトル
+ </summary>
+ <remarks>既定文言を設定</remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,604 @@
+2018-01-15 08:28:14.3165 DESKTOP-2Q89F24 5  ::1 GET http://localhost:49338/ 
+
+2018-01-15 08:28:27.6735 DESKTOP-2Q89F24 16  ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 08:28:28.1638 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 08:28:31.4123 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 08:29:12.8052 DESKTOP-2Q89F24 15 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+KeyCdCondition=
+
+2018-01-15 08:29:12.8592 DESKTOP-2Q89F24 15 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 08:53:46.1603 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 08:53:58.2861 DESKTOP-2Q89F24 10  ::1 GET http://localhost:49338/ 
+
+2018-01-15 08:54:15.0117 DESKTOP-2Q89F24 8  ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 08:54:15.2812 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 08:54:37.9828 DESKTOP-2Q89F24 11  ::1 GET http://localhost:49338/?ReturnUrl=%2fMenu 
+ReturnUrl=/Menu
+
+2018-01-15 08:54:45.0137 DESKTOP-2Q89F24 11  ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=/Menu
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 08:54:45.1607 DESKTOP-2Q89F24 12 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 08:54:50.2487 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 08:54:55.5823 DESKTOP-2Q89F24 6 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+KeyCdCondition=
+
+2018-01-15 08:54:55.6278 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 08:55:00.4606 DESKTOP-2Q89F24 12 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail/Confirm 
+ViewMode=Detail
+KeyCd=
+Item=
+ListSet=
+FinalDestination=
+UnitPrice=
+Price=
+FactoryList=
+EstimateNumber=
+DeliveryTime=
+Remark=
+Total=0,0
+SearchKeyCd=
+RowId=6
+Revision=86
+
+2018-01-15 08:55:19.5744 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail/Confirm 
+ViewMode=Detail
+KeyCd=
+Item=
+ListSet=
+FinalDestination=
+UnitPrice=
+Price=
+FactoryList=
+EstimateNumber=
+DeliveryTime=
+Remark=
+Total=0,0
+SearchKeyCd=
+RowId=6
+Revision=86
+
+2018-01-15 08:55:24.3549 DESKTOP-2Q89F24 6 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail/Delete 
+ViewMode=Detail
+KeyCd=
+Item=
+ListSet=
+FinalDestination=
+UnitPrice=
+Price=
+FactoryList=
+EstimateNumber=
+DeliveryTime=
+Remark=
+Total=0,0
+SearchKeyCd=
+RowId=6
+Revision=86
+
+2018-01-15 08:56:10.7174 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail/Cancel 
+ViewMode=Detail
+KeyCd=
+Item=
+ListSet=
+FinalDestination=
+UnitPrice=
+Price=
+FactoryList=
+EstimateNumber=
+DeliveryTime=
+Remark=
+Total=0,0
+SearchKeyCd=
+RowId=6
+Revision=86
+
+2018-01-15 08:56:10.7524 DESKTOP-2Q89F24 10 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 08:56:13.7259 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+KeyCdCondition=
+
+2018-01-15 08:56:13.7574 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 09:00:50.3068 DESKTOP-2Q89F24 12 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail/Cancel 
+ViewMode=Detail
+KeyCd=
+Item=
+ListSet=
+FinalDestination=
+UnitPrice=
+Price=
+FactoryList=
+EstimateNumber=
+DeliveryTime=
+Remark=
+Total=0,0
+SearchKeyCd=
+RowId=6
+Revision=86
+
+2018-01-15 09:00:50.3343 DESKTOP-2Q89F24 13 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 09:02:37.9618 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+KeyCdCondition=
+
+2018-01-15 09:02:38.0443 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 09:03:17.4476 DESKTOP-2Q89F24 10 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail/Cancel 
+ViewMode=Detail
+KeyCd=
+Item=
+ListSet=
+FinalDestination=
+UnitPrice=
+Price=
+FactoryList=
+EstimateNumber=
+DeliveryTime=
+Remark=
+Total=0,0
+SearchKeyCd=
+RowId=6
+Revision=86
+
+2018-01-15 09:03:17.5201 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 09:03:41.2817 DESKTOP-2Q89F24 13 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Add 
+ViewMode=Init
+KeyCdCondition=
+
+2018-01-15 09:03:41.2967 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 09:05:33.6812 DESKTOP-2Q89F24 13 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail/Cancel 
+ViewMode=Insert
+KeyCd=
+Item=
+ListSet=
+FinalDestination=
+UnitPrice=
+Price=
+FactoryList=
+EstimateNumber=
+DeliveryTime=
+Remark=
+Total=0,0
+SearchKeyCd=
+RowId=
+Revision=0
+
+2018-01-15 09:05:33.7202 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 09:48:00.0919 DESKTOP-2Q89F24 5  ::1 GET http://localhost:49338/ 
+
+2018-01-15 09:48:32.8757 DESKTOP-2Q89F24 7  ::1 GET http://localhost:49338/ 
+
+2018-01-15 11:16:41.0634 DESKTOP-2Q89F24 5  ::1 GET http://localhost:49338/ 
+
+2018-01-15 11:17:21.9073 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 11:17:31.8644 DESKTOP-2Q89F24 10 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 11:17:32.0132 DESKTOP-2Q89F24 10 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 11:17:34.6124 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 11:23:49.2052 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 11:24:01.3505 DESKTOP-2Q89F24 10  ::1 GET http://localhost:49338/ 
+
+2018-01-15 11:24:58.2678 DESKTOP-2Q89F24 8  ::1 GET http://localhost:49338/ 
+
+2018-01-15 11:25:02.5592 DESKTOP-2Q89F24 8  ::1 GET http://localhost:49338/ 
+
+2018-01-15 11:25:09.6857 DESKTOP-2Q89F24 10  ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 11:25:09.8467 DESKTOP-2Q89F24 9 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 11:25:13.4232 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 11:25:17.6456 DESKTOP-2Q89F24 11 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 11:25:17.6876 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 13:06:01.0010 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 13:06:11.6792 DESKTOP-2Q89F24 9 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 13:06:11.8284 DESKTOP-2Q89F24 9 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 13:06:14.8841 DESKTOP-2Q89F24 14 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 13:06:17.9842 DESKTOP-2Q89F24 12 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 13:06:18.0137 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 13:12:35.7227 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 13:12:46.6911 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 13:12:46.8192 DESKTOP-2Q89F24 10 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 13:12:50.0849 DESKTOP-2Q89F24 13 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 13:12:53.0728 DESKTOP-2Q89F24 12 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 13:12:53.1283 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 13:17:24.6115 DESKTOP-2Q89F24 5  ::1 GET http://localhost:49338/ 
+
+2018-01-15 13:17:34.7036 DESKTOP-2Q89F24 6  ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 13:17:34.8261 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 13:17:37.5609 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 13:17:40.3468 DESKTOP-2Q89F24 10 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 13:17:40.5844 DESKTOP-2Q89F24 10 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 13:29:43.4988 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 13:29:57.7064 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 13:29:57.8425 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 13:30:01.6584 DESKTOP-2Q89F24 12 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 13:30:04.6948 DESKTOP-2Q89F24 6 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 13:30:04.7378 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 13:33:26.7033 DESKTOP-2Q89F24 9 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 13:33:35.2840 DESKTOP-2Q89F24 9 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 13:33:35.4461 DESKTOP-2Q89F24 11 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 13:33:38.3287 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 13:33:41.2160 DESKTOP-2Q89F24 11 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 13:33:41.2706 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 13:39:45.4657 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 13:40:08.8963 DESKTOP-2Q89F24 5 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 13:40:09.0363 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 13:40:12.9285 DESKTOP-2Q89F24 12 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 13:40:17.1395 DESKTOP-2Q89F24 6 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 13:40:17.2185 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 13:49:21.2008 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 13:49:33.8853 DESKTOP-2Q89F24 11 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 13:49:34.0143 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 13:49:38.3501 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 13:49:41.6574 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 13:49:41.7955 DESKTOP-2Q89F24 13 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 13:51:32.7676 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 13:51:50.4084 DESKTOP-2Q89F24 5 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 13:51:50.5644 DESKTOP-2Q89F24 11 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 13:51:56.1673 DESKTOP-2Q89F24 14 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 13:51:59.4575 DESKTOP-2Q89F24 14 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 13:51:59.5851 DESKTOP-2Q89F24 14 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 14:01:31.5543 DESKTOP-2Q89F24 10 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 14:02:23.4477 DESKTOP-2Q89F24 6 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 14:02:23.6107 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 14:02:27.6815 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 14:02:30.7879 DESKTOP-2Q89F24 9 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 14:02:30.8829 DESKTOP-2Q89F24 9 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 14:08:52.4445 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 14:09:10.7928 DESKTOP-2Q89F24 12 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 14:09:10.9152 DESKTOP-2Q89F24 12 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 14:09:13.5062 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 14:09:16.4767 DESKTOP-2Q89F24 10 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 14:09:16.5757 DESKTOP-2Q89F24 10 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 14:14:53.1104 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 14:15:45.2534 DESKTOP-2Q89F24 11 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 14:15:45.3789 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 14:15:48.2016 DESKTOP-2Q89F24 11 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 14:15:51.2345 DESKTOP-2Q89F24 5 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 14:15:51.4692 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 14:29:44.4256 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 14:32:07.6019 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 14:32:07.7376 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 14:32:10.6965 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 14:32:14.1271 DESKTOP-2Q89F24 10 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 14:32:14.1891 DESKTOP-2Q89F24 10 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 14:33:59.8124 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 14:34:02.9264 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 14:34:05.5474 DESKTOP-2Q89F24 7 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 14:34:05.5954 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 14:55:57.9261 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 14:56:13.0819 DESKTOP-2Q89F24 6 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 14:56:13.1930 DESKTOP-2Q89F24 11 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 14:56:15.7999 DESKTOP-2Q89F24 11 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 14:56:18.8850 DESKTOP-2Q89F24 5 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 14:56:19.0778 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 15:28:41.3614 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 15:28:54.2603 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 15:28:54.4908 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 15:29:00.6121 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 15:29:04.3570 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 15:29:04.5461 DESKTOP-2Q89F24 13 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 15:34:24.5456 DESKTOP-2Q89F24 10 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 15:34:42.3675 DESKTOP-2Q89F24 8 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 15:34:42.6365 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 15:34:46.6754 DESKTOP-2Q89F24 7 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 15:35:10.5714 DESKTOP-2Q89F24 11 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 15:35:10.7790 DESKTOP-2Q89F24 11 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 15:51:19.7500 DESKTOP-2Q89F24 6 SRS1 ::1 GET http://localhost:49338/ 
+
+2018-01-15 15:51:32.2166 DESKTOP-2Q89F24 5 SRS1 ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 15:51:32.4067 DESKTOP-2Q89F24 14 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 15:51:35.3976 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 15:51:38.8980 DESKTOP-2Q89F24 5 SRS1 ::1 POST http://localhost:49338/ZZ/ZZ1031/ZZ1031Search/Search 
+ViewMode=Init
+EstimateNoCondition=
+
+2018-01-15 15:51:39.1910 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Detail?menuId=ZZ1031&group=ZZ 
+menuId=ZZ1031
+group=ZZ
+
+2018-01-15 16:34:59.3881 DESKTOP-2Q89F24 5  ::1 GET http://localhost:49338/ 
+
+2018-01-15 16:35:14.2607 DESKTOP-2Q89F24 13  ::1 POST http://localhost:49338/Login/Login 
+ViewMode=Init
+ReturnUrl=
+UserId=SRS1
+Password=SRS1
+
+2018-01-15 16:35:14.4679 DESKTOP-2Q89F24 13 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 16:35:16.9421 DESKTOP-2Q89F24 8 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+
+2018-01-15 16:35:43.1074 DESKTOP-2Q89F24 13 SRS1 ::1 GET http://localhost:49338/Menu 
+
+2018-01-15 16:35:45.4635 DESKTOP-2Q89F24 5 SRS1 ::1 GET http://localhost:49338/ZZ/ZZ1031/ZZ1031Search 
+

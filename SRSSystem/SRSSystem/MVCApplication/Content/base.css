@@ -1,0 +1,919 @@
+﻿@charset "UTF-8";
+
+/***********************************************************/
+/***** base ************************************************/
+/***********************************************************/
+
+/* リセット */
+/*基本的なサイズ計算をIE6までのwidth/heightがボーダーまで含んだ計算方式になるよう設定*/
+* {
+    box-sizing: border-box;
+}
+/*各要素のデフォルト設定*/
+html {
+    font-family: "ＭＳ ゴシック", "MS Gothic", Osaka-mono, monospace;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+}
+ 
+body {
+    font-family: "ＭＳ ゴシック", "MS Gothic", Osaka-mono, monospace;
+    overflow: auto;
+    width: 100%;
+    background-color: #ffffff;
+    height: 100%;
+    /*-moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;*/
+}
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    color: #0f0f0f; /**/
+}
+
+pre, input, textarea, select, button {
+    font-family: inherit;
+}
+
+textarea {
+    white-space: pre;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: normal;
+    vertical-align: top;
+    white-space:nowrap;
+    text-align: left;
+}
+
+td {
+    font-weight: normal;
+    vertical-align: top;
+    white-space:nowrap;
+}
+ 
+li {
+    list-style: none;
+}
+
+/* float解除用の要素に設定するためのクラス */
+.clearfix:before, .clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/* default */
+/* フォームの各項目のデフォルトスタイル */
+input, textarea, select, button {
+    font-size: 9pt;
+}
+input[type=text], input[type=password], textarea, select {
+    border: solid 1px #999999;
+    outline: 0;
+}
+input[type=radio], input[type=checkbox] {
+    margin: 0;
+    padding: 0;
+}
+span.checkbox-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    height: 15px;
+}
+
+
+/* アンカーのデフォルトスタイル */
+a {
+    text-decoration: none;
+    color: #2040ff;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #FF9900;
+    text-decoration: underline;
+}
+
+/* フォームの型指定のデフォルトスタイル */
+/*input[type=text].item-text, input[type=password].item-text, select.item-text {*/
+.item-text {
+    ime-mode: inactive;
+    text-align: left;
+}
+.item-code {
+    ime-mode: inactive;
+    text-align: left;
+}
+/*input[type=text].item-numeric, input[type=password].item-numeric, select.item-numeric {*/
+.item-numeric {
+    ime-mode: inactive;
+    text-align: right;
+}
+/* フォームのIME制御はクラス指定で行う */
+input.ime-on, textarea.ime-on {
+    ime-mode: active;
+}
+/* 個別に文字寄せを指定する場合のクラス指定 */
+.item-text.h-center, .item-numeric.h-center {
+    text-align: center;
+}
+.item-text.h-left,   .item-numeric.h-left {
+    text-align: left;
+}
+.item-text.h-right,  .item-numeric.h-right {
+    text-align: right;
+}
+.item-text.v-middle, .item-numeric.v-middle {
+    vertical-align: middle;
+}
+.item-text.v-top,    .item-numeric.v-top {
+    vertical-align: top;
+}
+.item-text.v-bottom, .item-numeric.v-bottom {
+    vertical-align: bottom;
+}
+
+/* TODO 本来であれば error のスタイルは一括で定義したい */
+/* e.g.
+.item-error {
+  border: solid 1px #ff0000;
+  background-color: #ff9999;
+} */
+.input-validation-error,
+.checkbox-wrapper.input-validation-error,
+input[type=text].input-validation-error, input[type=password].input-validation-error, input[type=file].input-validation-error, select.input-validation-error, textarea.input-validation-error {
+    border: solid 1px #ff0000;
+}
+.input-validation-warn,
+.checkbox-wrapper.input-validation-warn,
+input[type=text].input-validation-warn, input[type=password].input-validation-warn, input[type=file].input-validation-warn, select.input-validation-warn, textarea.input-validation-warn {
+    border: solid 1px #0000ff;
+}
+/* エラー枠が二重になる場合を防止 */
+.input-validation-warn > input.input-validation-warn,
+.input-validation-error > input.input-validation-error {
+    border: none;
+}
+
+/*エラーメッセージのデフォルトスタイル*/
+.message-error {
+    color: #ff0000;
+}
+
+/*ボタンのデフォルトスタイル*/
+input[type=button],
+input[type=submit],
+input[type=reset]{
+    cursor: default;
+}
+input[type=button][disabled],
+input[type=submit][disabled],
+input[type=reset][disabled]{
+    cursor: default;
+}
+
+button{
+    cursor: default;
+}
+
+.btn {
+    cursor: default;
+    padding: 2px;
+}
+.btn.btn-default {
+    min-width: 80px;
+}
+.btn.btn-large {
+    min-width: 100px;
+}
+.btn.btn-medium {
+    min-width: 100px;
+}
+.btn.btn-small {
+    min-width: 60px;
+}
+
+/*ラジオボタンのデフォルトスタイル*/
+.radio-button-wrapper {
+    padding-top: 3px;
+}
+label.radio-button-label {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/***********************************************************/
+/***** layout **********************************************/
+/***********************************************************/
+
+body{
+    /*ヘッダーとフッターを固定サイズ/固定位置でレイアウトしているため、
+      page-bodyの開始と終了位置をpaddingで調整
+    */
+    padding-top: 30px; /*page header height*/
+    padding-bottom: 20px;  /*page footer height*/
+}
+
+/* page level */
+/*画面全体ヘッダー*/
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+/*画面全体ボディ*/
+.page-body {
+    margin: 0 10px 20px 10px;
+    padding: 10px 10px;
+    height: 100%;
+    min-height: 100%;
+}
+body .page-body {
+    height: auto;
+}
+
+/*画面全体フッター*/
+.page-footer {
+    border-top: solid 1px #999999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+.page-footer-message {
+    font-weight: bold;
+}
+
+/* content level */
+/*コンテンツ セクション*/
+.content-section{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*コンテンツ仕切り*/
+/*
+  コンテンツの仕切り線が必要な場合に利用する
+  以下はヘッダーとメインの間に下線が引かれる。
+  また、ヘッダー内の最初のセクションの下にも下線が引かれる
+  <div class="content-header content-divide">
+    <div class="content-section content-devide">
+    </div>
+    <div class="content-section">
+    </div>
+  </div>
+  <div class="content-main">
+  </div>
+*/
+.content-devide {
+    border-bottom: solid 1px #999999;
+}
+
+/*コンテンツヘッダー*/
+.content-header {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/*コンテンツ メイン*/
+.content-main {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/***********************************************************/
+/***** module **********************************************/
+/***********************************************************/
+
+/******* ページヘッダー モジュール ******/
+.page-header .page-header-content{
+    position: relative;
+    height: 25px;
+    margin: 5px 10px 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ヘッダグラデーション用の指定 */
+.page-header .page-header-content,
+.menu-content > .content-header {
+    /*背景グラデーション フォールバック*/
+    background-color: #0066ff;
+    /*IE -7*/
+    filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1, startColorStr=#0066ff, endColorStr=#0040a0);
+    /* IE 8+ */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(gradientType=1, startColorStr='#0066ff', endColorStr='#0040a0')";
+    background: linear-gradient(to right, #0066ff, #0040a0);
+}
+
+
+.page-header .page-header-title{
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    line-height: 25px;
+    margin-left: .5em;
+    vertical-align: middle;
+    color: white;
+}
+
+/*ユーザー名などの詳細項目(右寄せ)*/
+.page-header .page-header-detail{
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+    margin-right: .5em;
+}
+
+.page-header .page-header-detail-info{
+    font-size: 12px;
+    line-height: 25px;
+    vertical-align: middle;
+    color: white;
+}
+
+.page-header .page-header-detail .button-list{
+    display: inline-block;
+    margin: 0;
+}
+
+/******* 単票 モジュール ******/
+.table-items {
+    border: solid 1px #aaaaaa;
+}
+.table-items tr{
+    height: 2em;
+}
+.table-items th, .table-items td {
+    border: solid 1px #aaaaaa;
+    padding: 1px 2px;
+    vertical-align: middle;
+} 
+.table-items .table-item-title {
+    background-color: #cde1ff;
+    vertical-align: middle;
+    padding-right: 1em;
+}
+.table-items .table-item-title.table-item-require {
+    background-color: #ffe6cd;
+}
+
+.fixed-header .content-header {
+    position: fixed;
+    width: 100%;
+    top: 25px;
+    background-color: white;
+    padding: 3px;
+    z-index: 100;
+}
+
+.fixed-header .content-main {
+    margin-top: 100px;
+}
+
+/******* 一覧 モジュール ******/
+.table-list {
+    display: inline-block;
+    overflow: auto;
+    position: relative;
+}
+.table-list-header, .table-list-body{
+    width: 100%;
+    table-layout: fixed;
+}
+.table-list.auto-width .table-list-header,
+.table-list.auto-width .table-list-body{
+    width: 100%;
+    table-layout: auto;
+}
+
+.wrappable td, .wrappable th {
+    white-space: normal;
+}
+
+.table-list-header th, .table-list-header td{
+    border: solid 1px #aaaaaa;
+    border-bottom: none;
+    padding: 1px 3px;
+    background-color: #cde1ff;
+    text-align: center;
+    vertical-align: middle;
+    height: 1.5em;
+}
+.table-list-header th.table-item-require, .table-list-header td.table-item-require{
+    background-color: #ffe6cd;
+}
+.table-list-body th, .table-list-body td{
+    border: solid 1px #aaaaaa;
+    padding: 1px 3px;
+    vertical-align: middle;
+}
+
+/*radio or checkbox 用カラム */
+.table-list .col-select {
+    width: 35px;
+    text-align: center;
+}
+
+/*一覧のカラムサイズ設定用隠し行*/
+.table-list-body .table-list-fixed-cols,
+.table-list-header .table-list-fixed-cols {
+    height:0;
+    padding: 0;
+    margin:0;
+    border: 0;
+}
+/*一覧のカラムサイズ設定用隠しカラム*/
+.table-list-body .table-list-fixed-cols td,
+.table-list-header .table-list-fixed-cols td {
+    height:0;
+    padding: 0;
+    margin:0;
+    border-width: 0 1px; /*左右のサイズをあわせるためにセルのborder-widthを設定*/
+}
+/*縞模様用*/
+/*本来であればtable-record2 よりも row-odd などのクラス名がよい*/
+.table-list-body .table-list-row.table-record2 {
+    background-color: #ededed;
+}
+
+/*一覧内のエラーメッセージ*/
+.table-list-body .table-record-error{
+    background-color: #ffcdcd;
+}
+
+.table-list-body .table-record-error .message-error{
+    color: #ff0000;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/*選択可能テーブル*/
+.table-list.selectable .table-list-body .table-list-row{
+    cursor: pointer;
+}
+
+.table-list.selectable .table-list-body .table-list-row.row-selected{
+    background-color: #ffffcc;
+}
+
+.table-list.selectable .table-list-body .table-list-row:hover,
+.table-list.selectable .table-list-body .table-list-row.row-selected:hover{
+    background-color: #ffff9d;
+}
+
+/*複数行選択可能テーブル (グループ毎にtbodyで区切る)*/
+.table-list.selectable.multiline .table-list-body tbody:hover,
+.table-list.selectable.multiline .table-list-body tbody:hover .table-list-row{
+    background-color: #ffff9d;
+}
+
+/*スクロール可能テーブル*/
+.table-list.scrollable {
+    display: inline-block;
+    overflow: auto;
+    position: relative;
+    padding-right: 18px;  /*windows 以外の場合など scroll の幅が変わるため実際はスクリプトなどで調整が必要*/
+}
+.table-list.scrollable .table-list-body-container{
+    position: relative; 
+    left: 0; 
+    margin-right:-17px;  /*windows 以外の場合など scroll の幅が変わるため実際はスクリプトなどで調整が必要*/
+    overflow-y: scroll;
+    padding-bottom: 1px;
+    /*todo: スクロールさせるときはコンテナーにheightの指定が必要*/
+}
+
+
+
+/* 行高さの低いテーブル */
+.table-list.narrow input, .table-list.narrow select, .table-list.narrow button {
+    max-height: 14px;
+}
+.table-list.narrow select {
+    font-size: 95%;
+}
+.table-list.narrow button {
+    font-size: 80%;
+}
+.table-list.narrow tr:before{
+    content: "";
+    display: table-cell;
+    height: 15px;
+    width: 0px;
+}
+.table-list.narrow tr.table-list-fixed-cols:before {
+    height: 0px;
+}
+.table-list.narrow td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+/* 行高さの高いテーブル */
+.table-list.broad td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.table-list.broad tr:before{
+    content: "";
+    display: table-cell;
+    height: 21px;
+    width: 0px;
+}
+.table-list.broad tr.table-list-fixed-cols:before {
+    height: 0px;
+}
+.table-list.broad .table-list-fixed-cols td:last-child:before {
+    height: 0px;
+}
+
+/* ダイアログ表示 */
+.ui-dialog .ui-dialog-content.frame-window {
+    padding: 0;
+}
+
+/* 列固定テーブル */
+#fixed-header {
+    overflow: hidden
+}
+#flow-header {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#fixed-data {
+    overflow: hidden;
+}
+#flow-data {
+    overflow: hidden;
+    padding-right: 17px;
+}
+.scrollable.table-list .grid-table .table-list-body-container 
+{
+    overflow: scroll;
+    position: inherit;
+}
+.scrollable.table-list[fixed-columns]
+{
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 列固定テーブルの、固定列全体の幅 */
+.grid-table .grid-fixed-tables 
+{
+    width: auto;
+    overflow: hidden;
+}
+/* 列固定テーブルの、固定でない列全体の幅 */
+.grid-table .grid-flow-tables 
+{
+    width: 400px;
+    overflow: scroll;
+}
+
+/* 内容がはみ出た際、...で省略するテーブル */
+.ellipsis.table-list td, .ellipsis.table-list th 
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/** 一覧省略表示モジュール **/
+/* 一覧の項目がはみ出た場合は…で省略する */
+.table-list th, .table-list td.item-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* wrappable 指定の場合は折り返しを優先 */
+.table-list.wrappable td.item-text, .table-list.wrappable th {
+    white-space: normal;
+}
+
+.table-list.no-ellipsis th, .table-list.no-ellipsis td.item-text {
+    text-overflow: clip;
+}
+
+/* 一覧で省略した内容をツールチップ表示するための要素 */
+.list-tooltip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid black;
+    z-index: 1000;
+    padding: 3px;
+    display: none;
+    margin: 0;
+    /*box-shadow: 3px 3px 3px rgba(0,0,0,0.4);*/
+
+    /*背景グラデーション フォールバック*/
+    background-color: #eeeeee;
+    /*IE -7*/
+    filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0, startColorStr=#ffffff, endColorStr=#dddddd);
+    /* IE 8+ */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(gradientType=0, startColorStr='#ffffff', endColorStr='#dddddd')";
+    background: linear-gradient(to bottom, #ffffff, #dddddd);
+}
+
+
+/******* ボタンリスト モジュール ******/
+.button-list .paging-control{
+    display: inline-block;
+}
+
+
+
+/******* ログイン モジュール ******/
+.login-description {
+    margin-left: 10px;
+}
+
+.login-input-container {
+    margin-left: 40px;
+    margin-top: 10px;
+    display: table;
+}
+
+.login-input-item {
+    margin-top: 5px;
+    display: table-row;
+}
+
+.login-input-item > span {
+    display: table-cell;
+    padding: 2px;
+}
+
+.login-submit-button {
+    margin-left: 140px;
+    margin-top: 10px;
+}
+
+.login-information-container {
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+.login-information-content {
+    width: 95%;
+    height: 214px;
+    overflow: auto;
+    padding: 5px;
+    border: inset #aaaaaa 1px;
+}
+
+/******* メニュー モジュール ******/
+.menu-message-container {
+    float: right;
+    width: 330px;
+    background-color: #FFFFFF;
+    border: solid #666666 1px;
+    min-height: 500px;
+    padding: 5px;
+}
+.menu-container {
+    margin-right: 350px;
+    background-color: #CDE1FF;
+    border: solid #666666 1px;
+    min-height: 500px;
+}
+
+.menu-content {
+    margin: 2px;
+
+    border-top: solid #ffffff 1px;
+    border-left: solid #ffffff 1px;
+    border-right: solid #666666 1px;
+    border-bottom: solid #666666 1px;
+}
+
+.menu-content-title {
+    padding: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+.menu-link-text {
+    cursor: hand;
+    color: #ffffff;
+}
+.menu-link-text:hover {
+    color: #ff9900;
+}
+
+.menu-content-list {
+    background-color: white;
+    line-height: 1.4em;
+    display: none;
+}
+
+li.menu-content-list-item {
+    padding-left: 10px;
+    color: #0000cc;
+}
+
+
+/******* ポップアップ画面 モジュール ******/
+.fill-container {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.fill-container:before {
+    height: 30%;
+    display: block;
+    content: "";
+}
+.fill-contents:before{
+    display: block;
+    height: 35%;
+    content: "";
+}
+.fill-contents {
+    height: 40%;
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    overflow: auto;
+
+    font-weight: bold;
+    color: #000066;
+    background-color: #F0F8FF;
+}
+.fill-command-area {
+    margin-top: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* フッタメッセージを吹き出しでツールチップ表示するための要素 */
+.message-tooltip
+{
+    display: none;
+    position: absolute;
+    left: 5px;
+    bottom: 32px;
+    background: #FFCCFF;
+    border: 2px solid #999999;
+    padding: 1em;
+    z-index: 999;
+}
+.message-tooltip > span {
+    white-space: pre;
+    font-weight: bold;
+}
+.message-tooltip:after, .message-tooltip:before {
+    top: 100%;
+    left: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.message-tooltip:after {
+    border-color: rgba(255, 204, 255, 0);
+    border-top-color: #FFCCFF;
+    border-width: 12px;
+    margin-left: -12px;
+}
+.message-tooltip:before {
+    border-color: rgba(153, 153, 153, 0);
+    border-top-color: #999999;
+    border-width: 15px;
+    margin-left: -15px;
+}
+
+/*** ドロップダウンチェックリスト ***/
+.dropdown-checklist-dummybox {
+    height: 16px;
+    border: 1px solid Gray;
+    white-space: nowrap;
+}
+.dropdown-checklist-focus {
+    background-color: #44aaff;
+    color: White;
+}
+.dropdown-checklist-focus > label {
+    color: White;
+}
+.dropdown-checklist-focus > label:hover {
+    color: Black;
+}
+.dropdown-checklist-focus .dropdown-checklist-dummybox-message {
+    color: White;
+}
+.dropdown-checklist-dummybox .dropdown-checklist-dummybox-message {
+    display: table-cell;
+    min-width: 1.5em;
+    padding: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.dropdown-checklist-dummybox .dropdown-checklist-dummybox-button {
+    display: table-cell;
+    text-align: center;
+
+    width: 19px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAOCAIAAABCerDeAAAAB3RJTUUH4AQSCCkp3efeyQAAABd0RVh0U29mdHdhcmUAR0xEUE5HIHZlciAzLjPv4TFCAAAACHRwTmdHTEQzAAAAAMhxq7wAAAB2SURBVHgBY1hAFpg6dSoDUOMH0kFmZubg0Llq1SpM159dteossihW166KZWCIRdF8ttWQwbCVsM4PIIUIzRAemsYPWO0EOQqmGbs2oAKcOuGaGdCdCTIXCPDpBEqfbY1F9R1YE5ggoBOhEIM1UDqBaRdoNRkAAKgxeA7ODBNlAAAAAElFTkSuQmCC);
+}
+.dropdown-checklist {
+}
+.dropdown-checklist-items {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    background-color: White;
+    border: 1px solid black;
+    overflow: auto;
+    overflow-y: scroll;
+    max-height: 250px;
+    z-index: 2147483647;
+}
+.dropdown-checklist-item
+{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.dropdown-checklist-item:hover {
+    background-color: #ddd;
+}
+.dropdown-checklist-item input
+{
+    margin-top: 1px;
+    margin-right: 2px;
+}
+.dropdown-checklist-items button {
+    display: block;
+}
+
+.dropdown-checklist-select-all 
+{
+    margin-top: 0.5em;
+}
+.dropdown-checklist-select-all, .dropdown-checklist-clear-all {
+    font-size: x-small;
+    display: block;
+    text-decoration: underline;
+    color: blue;
+    margin-left: 1em;
+    padding: 1px;
+    cursor: pointer;
+}
+
+
+
+
+.glimpse-nowrap {
+    bottom: 20px !important;
+}
+.glimpse-hud-summary.glimpse-hud-summary-space.glimpse-hud-summary-right {
+    margin-top: 1em;
+}

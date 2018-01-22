@@ -1,0 +1,450 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ZZ1031
+</name>
+</assembly>
+<members>
+<member name="T:SRSSystem.ZZ.ZZ1031.My.Resources.Resources">
+<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.My.Resources.Resources.ResourceManager">
+<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.My.Resources.Resources.Culture">
+<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member>
+<member name="T:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailFacade">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>トレニンーグ機能グループ</subSysName>
+ <summary>
+ 納品見積登録 詳細画面 Facadeクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailFacade.Index">
+ <summary>
+ 詳細画面 初期化処理
+ </summary>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailFacade.Confirm(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 詳細画面 確認処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailFacade.Insert(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 詳細画面 登録処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailFacade.Update(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 詳細画面 更新処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailFacade.Delete(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 詳細画面 削除処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailFacade.Calculation(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 詳細画面 計算処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="T:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailRule">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>トレニンーグ機能グループ</subSysName>
+ <summary>
+ 納品見積登録 詳細画面 Ruleクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailRule.Init(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 詳細画面 初期化処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailRule.GetCommonData(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 表示情報取得
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailRule.CheckInput(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 入力内容チェック処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailRule.InsertDetail(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 入力データ登録処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailRule.UpdateDetail(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 入力データ更新処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031DetailRule.DeleteDetail(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 入力データ削除処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデル</returns>
+</member>
+<member name="T:SRSSystem.ZZ.ZZ1031.Business.ZZ1031SearchFacade">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>トレニンーグ機能グループ</subSysName>
+ <summary>
+ 納品見積登録 検索画面 Facadeクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031SearchFacade.Index">
+ <summary>
+ 検索画面 初期化処理
+ </summary>
+ <returns>検索画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031SearchFacade.Search(SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel)">
+ <summary>
+ 検索画面 検索処理
+ </summary>
+ <param name="searchModel">検索画面モデル</param>
+ <returns>検索画面モデル</returns>
+</member>
+<member name="T:SRSSystem.ZZ.ZZ1031.Business.ZZ1031SearchRule">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>トレニンーグ機能グループ</subSysName>
+ <summary>
+ 納品見積登録 検索画面 Ruleクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031SearchRule.Init(SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel)">
+ <summary>
+ 検索画面 初期化処理
+ </summary>
+ <param name="searchModel">検索画面モデル</param>
+ <returns>検索画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031SearchRule.GetCommonData(SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel)">
+ <summary>
+ 表示情報取得
+ </summary>
+ <param name="searchModel">検索画面モデル</param>
+ <returns>検索画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031SearchRule.CheckCondition(SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel)">
+ <summary>
+ 検索画面 入力値チェック処理
+ </summary>
+ <param name="searchModel">検索画面モデル</param>
+ <returns>検索画面モデル</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.Business.ZZ1031SearchRule.Search(SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel)">
+ <summary>
+ 検索画面 検索処理
+ </summary>
+ <param name="searchModel">検索画面モデル</param>
+ <returns>検索画面モデル</returns>
+</member>
+<member name="T:SRSSystem.ZZ.ZZ1031.Constant.ZZ1031Constant">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>トレニンーグ機能グループ</subSysName>
+ <summary>
+ 納品見積登録 定数クラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="F:SRSSystem.ZZ.ZZ1031.Constant.ZZ1031Constant.RedirectSearch">
+ <summary>
+ 検索画面遷移文字列
+ </summary>
+</member>
+<member name="F:SRSSystem.ZZ.ZZ1031.Constant.ZZ1031Constant.RedirectDetail">
+ <summary>
+ 詳細画面遷移文字列
+ </summary>
+</member>
+<member name="F:SRSSystem.ZZ.ZZ1031.Constant.ZZ1031Constant.LengthKeyCd">
+ <summary>
+ ＫＥＹコードの文字列長
+ </summary>
+</member>
+<member name="F:SRSSystem.ZZ.ZZ1031.Constant.ZZ1031Constant.LengthRyakusyoZenkaku">
+ <summary>
+ 略称(全角)の文字列長
+ </summary>
+</member>
+<member name="F:SRSSystem.ZZ.ZZ1031.Constant.ZZ1031Constant.LengthRyakusyoHankaku">
+ <summary>
+ 略称(半角)の文字列長
+ </summary>
+</member>
+<member name="F:SRSSystem.ZZ.ZZ1031.Constant.ZZ1031Constant.MinSujiCd">
+ <summary>
+ 数字コードの最小値
+ </summary>
+</member>
+<member name="F:SRSSystem.ZZ.ZZ1031.Constant.ZZ1031Constant.MaxSujiCd">
+ <summary>
+ 数字コードの最大値
+ </summary>
+</member>
+<member name="T:SRSSystem.ZZ.ZZ1031.DataAccess.ZZ1031DataAccess">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>トレニンーグ機能グループ</subSysName>
+ <summary>
+ 納品見積登録 データアクセスクラス
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.DataAccess.ZZ1031DataAccess.GetDetailCount(SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel)">
+ <summary>
+ 検索画面 詳細データ件数取得
+ </summary>
+ <param name="searchModel">詳細画面モデル</param>
+ <returns>データ件数</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.DataAccess.ZZ1031DataAccess.GetDetail(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 詳細画面 詳細データ取得
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>詳細画面モデルリスト</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.DataAccess.ZZ1031DataAccess.InsertDetail(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 詳細画面 詳細データ登録処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>処理件数</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.DataAccess.ZZ1031DataAccess.UpdateDetail(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 詳細画面 詳細データ更新処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>処理件数</returns>
+</member>
+<member name="M:SRSSystem.ZZ.ZZ1031.DataAccess.ZZ1031DataAccess.DeleteDetail(SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel)">
+ <summary>
+ 詳細画面 詳細データ削除処理
+ </summary>
+ <param name="detailModel">詳細画面モデル</param>
+ <returns>処理件数</returns>
+</member>
+<member name="T:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>トレニンーグ機能グループ</subSysName>
+ <summary>
+ 納品見積登録 詳細画面モデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.FuncName">
+ <summary>
+ 画面タイトル
+ </summary>
+ <remarks>固定文言を設定</remarks>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.WindowTitle">
+ <summary>
+ Windowタイトル
+ </summary>
+ <remarks>固定文言を設定</remarks>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.EstimateNo">
+ <summary>
+ 見積No
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.Item">
+ <summary>
+ アイテムNo
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.FinalDestination">
+ <summary>
+ 最終仕向先
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.ReferenceRnm">
+ <summary>
+ 参照ボタン
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.ListSet">
+ <summary>
+ セットリスト
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.UnitCost">
+ <summary>
+ 単価
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.EstimateNumber">
+ <summary>
+ 見積数
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.Price">
+ <summary>
+ 価格
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.ListFactory">
+ <summary>
+ 工場
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.DeliveryTime">
+ <summary>
+ 搬入期限
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.Remark">
+ <summary>
+ 備考
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.ListSetData">
+ <summary>
+ リストSETデータ
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.ListFactoryData">
+ <summary>
+ リストSETデータ
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.DateFrom">
+ <summary>
+ 開始日
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.DateTo">
+ <summary>
+ 終了日
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031DetailModel.SearchEstimateNo">
+ <summary>
+ 検索時の見積No
+ </summary>
+</member>
+<member name="T:SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel">
+ <userName>SRS</userName>
+ <sysName>トレーニング</sysName>
+ <subSysName>トレニンーグ機能グループ</subSysName>
+ <summary>
+ 納品見積登録 検索画面 メインモデル
+ </summary>
+ <author>SRSTaro</author>
+ <Version>
+ 001, 2018-01-11, 新規作成
+ </Version>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel.FuncName">
+ <summary>
+ 画面タイトル
+ </summary>
+ <remarks>固定文言を設定</remarks>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel.WindowTitle">
+ <summary>
+ Windowタイトル
+ </summary>
+ <remarks>固定文言を設定</remarks>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel.EstimateNoCondition">
+ <summary>
+ 見積No(検索条件)
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel.DateFrom">
+ <summary>
+ 開始日
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel.DateTo">
+ <summary>
+ 終了日
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel.ListSetData">
+ <summary>
+ リストセットデータ
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel.ListFactoryData">
+ <summary>
+ リスト工場データ
+ </summary>
+</member>
+<member name="P:SRSSystem.ZZ.ZZ1031.Model.ZZ1031SearchModel.DetailViewMode">
+ <summary>
+ 詳細画面のViewMode
+ </summary>
+</member>
+</members>
+</doc>

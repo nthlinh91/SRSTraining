@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ResourceProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BaseName>Resource</BaseName>
+  <Type>JSON</Type>
+  <IsFixedNameResource>false</IsFixedNameResource>
+  <DisableKeyCharacterLimit>false</DisableKeyCharacterLimit>
+  <Cultures>
+    <Culture>ja-JP</Culture>
+    <Culture>en-US</Culture>
+  </Cultures>
+</ResourceProject>

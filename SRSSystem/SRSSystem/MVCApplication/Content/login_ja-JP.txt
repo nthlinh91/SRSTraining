@@ -1,0 +1,4 @@
+﻿<ul>
+  <li>SRS1/SRS1</li>
+  <li>この内容は /Content/login_ja-JP.txt に記述されています</li>
+</ul>
